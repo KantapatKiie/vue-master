@@ -58,10 +58,26 @@
           btn
         >
           <!-- <i slot="item_btn" class="fa fa-bars fa-lg" :style="btnToggle"></i> -->
-          <i slot="item_1" class="fa fa-twitch fa-lg" :style="colorMenuToggle"></i>
-          <i slot="item_2" class="fa fa-weixin fa-lg" :style="colorMenuToggle"></i>
-          <i slot="item_3" class="fa fa-weibo fa-lg" :style="colorMenuToggle"></i>
-          <i slot="item_4" class="fa fa-twitter fa-lg" :style="colorMenuToggle"></i>
+          <i
+            slot="item_1"
+            class="fa fa-twitch fa-lg"
+            :style="colorMenuToggle"
+          ></i>
+          <i
+            slot="item_2"
+            class="fa fa-weixin fa-lg"
+            :style="colorMenuToggle"
+          ></i>
+          <i
+            slot="item_3"
+            class="fa fa-weibo fa-lg"
+            :style="colorMenuToggle"
+          ></i>
+          <i
+            slot="item_4"
+            class="fa fa-twitter fa-lg"
+            :style="colorMenuToggle"
+          ></i>
         </circle-menu>
       </div>
     </div>
@@ -94,7 +110,7 @@ export default {
       btnToggle: {
         // backgroundColor: "black",
         color: "white"
-      },
+      }
     };
   },
   methods: {

@@ -6,7 +6,6 @@
           <li>
             <router-link :to="{ path: '/admin' }">Bottom bars</router-link>
           </li>
-          
         </ul>
       </nav>
     </div>
