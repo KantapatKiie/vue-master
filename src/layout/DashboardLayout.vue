@@ -46,7 +46,24 @@
         <dashboard-content @click="toggleSidebar"> </dashboard-content>
         <content-footer></content-footer>
       </div>
-      <div class="col-lg-3" />
+      <div class="col-lg-3">
+        <circle-menu
+          type="bottom"
+          :number="4"
+          animate="animated"
+          mask="black"
+          circle
+          class="navbar-transparent"
+          colors="white"
+          btn
+        >
+          <!-- <i slot="item_btn" class="fa fa-bars fa-lg" :style="btnToggle"></i> -->
+          <i slot="item_1" class="fa fa-twitch fa-lg" :style="colorMenuToggle"></i>
+          <i slot="item_2" class="fa fa-weixin fa-lg" :style="colorMenuToggle"></i>
+          <i slot="item_3" class="fa fa-weibo fa-lg" :style="colorMenuToggle"></i>
+          <i slot="item_4" class="fa fa-twitter fa-lg" :style="colorMenuToggle"></i>
+        </circle-menu>
+      </div>
     </div>
   </div>
 </template>
@@ -56,18 +73,28 @@ import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "./MobileMenu.vue";
+import CircleMenu from "vue-circle-menu";
+
 export default {
   components: {
     TopNavbar,
     DashboardContent,
-    // ContentFooter,
-    MobileMenu
+    ContentFooter,
+    MobileMenu,
+    CircleMenu
   },
   data() {
     return {
       myStyle: {
         backgroundColor: "#f0f0f0"
-      }
+      },
+      colorMenuToggle: {
+        color: "white"
+      },
+      btnToggle: {
+        // backgroundColor: "black",
+        color: "white"
+      },
     };
   },
   methods: {

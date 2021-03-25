@@ -146,7 +146,7 @@ export default {
   components: {
     LTable,
     ChartCard,
-    StatsCard
+    StatsCard,
   },
   data() {
     return {
