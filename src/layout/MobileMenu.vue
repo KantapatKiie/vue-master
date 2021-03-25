@@ -35,9 +35,8 @@
   </ul>
 </template>
 <script>
-  export default {
-    name: 'mobile-menu'
-  }
+export default {
+  name: "mobile-menu"
+};
 </script>
-<style>
-</style>
+<style></style>
