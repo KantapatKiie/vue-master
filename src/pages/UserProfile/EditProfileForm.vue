@@ -134,7 +134,7 @@ export default {
     return {
       user: {
         company: "Light dashboard",
-        username: "michael23",
+        username: "Kantapat",
         email: "",
         firstName: "Mike",
         lastName: "Andrew",
