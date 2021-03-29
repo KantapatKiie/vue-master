@@ -2,7 +2,7 @@
   <div class="wrapper-full-page" :style="myStyle">
     <!-- <side-bar>
       <mobile-menu slot="content"></mobile-menu>
-      <sidebar-link to="/admin/overview">
+      <sidebar-link to="/admin/register">
         <i class="nc-icon nc-chart-pie-35"></i>
         <p>Dashboard</p>
       </sidebar-link>
@@ -22,10 +22,6 @@
         <i class="nc-icon nc-atom"></i>
         <p>Icons</p>
       </sidebar-link>
-      <sidebar-link to="/admin/maps">
-        <i class="nc-icon nc-pin-3"></i>
-        <p>Maps</p>
-      </sidebar-link>
       <sidebar-link to="/admin/notifications">
         <i class="nc-icon nc-bell-55"></i>
         <p>Notifications</p>
@@ -39,14 +35,15 @@
         </sidebar-link>
       </template>
     </side-bar> -->
-    <div class="row">
-      <div class="col-lg-3" />
-      <div class="col-lg-6">
+    <div class="row justify-content-md-center">
+      <div class="col-lg-4" >
         <top-navbar></top-navbar>
         <dashboard-content @click="toggleSidebar"> </dashboard-content>
         <content-footer></content-footer>
+        <!-- <mobile-menu></mobile-menu> -->
       </div>
-      <div class="col-lg-3">
+      <!-- Toggle -->
+      <!-- <div class="col-lg-3">
         <circle-menu
           type="bottom"
           :number="4"
@@ -55,9 +52,8 @@
           circle
           class="navbar-transparent"
           colors="white"
-          btn
         >
-          <!-- <i slot="item_btn" class="fa fa-bars fa-lg" :style="btnToggle"></i> -->
+          <i slot="item_btn" class="fa fa-bars fa-lg" :style="btnToggle"></i>
           <i
             slot="item_1"
             class="fa fa-twitch fa-lg"
@@ -79,7 +75,7 @@
             :style="colorMenuToggle"
           ></i>
         </circle-menu>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
@@ -104,12 +100,20 @@ export default {
       myStyle: {
         backgroundColor: "#f0f0f0"
       },
+      nav2Styles: {
+        backgroundColor: "black"
+      },
+      imageUser: {
+        width: "50px"
+      },
       colorMenuToggle: {
         color: "white"
       },
       btnToggle: {
-        // backgroundColor: "black",
         color: "white"
+      },
+      flexStyleBody:{
+        flex: "0.5",
       }
     };
   },
