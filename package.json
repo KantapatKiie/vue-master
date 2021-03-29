@@ -1,9 +1,9 @@
 {
-  "name": "vue-light-bootstrap-dashboard",
-  "version": "2.0.0",
+  "name": "vue-exams",
+  "version": "1.0.0",
   "private": true,
-  "description": "Vue light bootstrap dashboard",
-  "author": "cristijora <joracristi@gmail.com>",
+  "description": "Vue bootstrap",
+  "author": "Kantapat",
   "scripts": {
     "start": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
