@@ -12,71 +12,175 @@
     <br />
     <div class="card-body">
       <form>
-        <div class="col-md-12">
-          <div>
-            <label class="control-label" :style="textMemo">
-              ธนาคารที่ใช้
-            </label>
-            <select v-model="user.accbank" class="form-select">
-              <option disabled value="1">Please select bank</option>
-              <option>A</option>
-              <option>B</option>
-              <option>C</option>
-            </select>
+        <div class="col-lg-12">
+          <div class="form-group-lg" :style="boxPDStyles">
+            <div class="row">
+              <div class="col-sm-12">
+                <div :style="inputGroupStyle">
+                  <div class="myselect">
+                    <select
+                      class="form-control"
+                      v-model="user.accbank"
+                      :style="selectTextColor"
+                    >
+                      <option disabled value="1">ธนาคารที่ใช้</option>
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/lineInput.jpg"
+              :style="listInputStyle"
+            />
           </div>
-          <base-input
-            type="number"
-            label="เลขที่บัญชี (Account no. bank)"
-            placeholder="เลขที่บัญชี"
-            v-model="user.banknumber"
-            :style="textMemo"
-          >
-          </base-input>
-          <base-input
-            type="text"
-            label="ชื่อ - นามสกุล (Account name bank)"
-            placeholder="ชื่อ และนามสกุล"
-            v-model="user.fullname"
-            :style="textMemo"
-          >
-          </base-input>
-          <base-input
-            type="number"
-            label="เบอร์โทรศัพท์"
-            placeholder="เบอร์โทรศัพท์"
-            v-model="user.telephone"
-            :style="textMemo"
-          >
-          </base-input>
-          <base-input
-            type="password"
-            label="รหัสเข้าเล่น (ล็อกอินเข้าสู่ระบบ)"
-            placeholder="รหัสเข้าเล่น"
-            v-model="user.password"
-            :style="textMemo"
-          >
-          </base-input>
-          <div>
-            <label class="control-label" :style="textMemo">
-              รู้จักเราที่ไหน ?
-            </label>
-            <select v-model="user.knowus" class="form-select">
-              <option disabled value="1">Please select</option>
-              <option>A</option>
-              <option>B</option>
-              <option>C</option>
-            </select>
+
+          <div class="form-group" :style="boxPDStyles">
+            <div class="row">
+              <div class="col-sm-12">
+                <div :style="inputGroupStyle">
+                  <input
+                    type="search"
+                    class="form-control"
+                    aria-describedby="addon-right addon-left"
+                    placeholder="เลขที่บัญชี.."
+                    maxlength="16"
+                    v-model="user.banknumber"
+                    :style="inputBlackBoxStyle"
+                  />
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/lineInput.jpg"
+              :style="listInputStyle"
+            />
           </div>
-          <div>
-            <label class="control-label" :style="textMemo">
-              โปรโมชั่น
-            </label>
-            <select v-model="user.promotion" class="form-select">
-              <option disabled value="1">Please select promotion</option>
-              <option>A</option>
-              <option>B</option>
-              <option>C</option>
-            </select>
+
+          <div class="form-group" :style="boxPDStyles">
+            <div class="row">
+              <div class="col-sm-12">
+                <div :style="inputGroupStyle">
+                  <input
+                    type="search"
+                    class="form-control"
+                    aria-describedby="addon-right addon-left"
+                    placeholder="ชื่อ - นามสกุล (ชื่อบัญชีธนาคาร)"
+                    v-model="user.fullname"
+                    :style="inputBlackBoxStyle"
+                  />
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/lineInput.jpg"
+              :style="listInputStyle"
+            />
+          </div>
+
+          <div class="form-group" :style="boxPDStyles">
+            <div class="row">
+              <div class="col-sm-12">
+                <div :style="inputGroupStyle">
+                  <input
+                    type="tel"
+                    class="form-control"
+                    aria-describedby="addon-right addon-left"
+                    placeholder="เบอร์โทรศัพท์"
+                    maxlength="10"
+                    pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
+                    v-model="user.telephone"
+                    required
+                    :style="inputBlackBoxStyle"
+                  />
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/lineInput.jpg"
+              :style="listInputStyle"
+            />
+          </div>
+
+          <div class="form-group" :style="boxPDStyles">
+            <div class="row">
+              <div class="col-sm-12">
+                <div :style="inputGroupStyle">
+                  <input
+                    type="search"
+                    class="form-control"
+                    aria-describedby="addon-right addon-left"
+                    placeholder="รหัสเข้าเล่น (ล็อกอินเข้าสู่ระบบ)"
+                    v-model="user.password"
+                    :style="inputBlackBoxStyle"
+                  />
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/lineInput.jpg"
+              :style="listInputStyle"
+            />
+          </div>
+
+          <div class="form-group-lg" :style="boxPDStyles">
+            <div class="row">
+              <div class="col-sm-12">
+                <div :style="inputGroupStyle">
+                  <div class="myselect">
+                    <select
+                      class="form-control"
+                      v-model="user.knowus"
+                      :style="selectTextColor"
+                    >
+                      <option disabled value="1">รู้จักเราที่ไหน ?</option>
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/lineInput.jpg"
+              :style="listInputStyle"
+            />
+          </div>
+
+          <div class="form-group-lg" :style="boxPDStyles">
+            <div class="row">
+              <div class="col-sm-12">
+                <div :style="inputGroupStyle">
+                  <div class="myselect">
+                    <select
+                      class="form-control"
+                      v-model="user.promotion"
+                      :style="selectTextColor"
+                    >
+                      <option disabled value="1">โปรโมชั่น ?</option>
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/lineInput.jpg"
+              :style="listInputStyle"
+            />
           </div>
 
           <!-- button register -->
@@ -156,13 +260,27 @@ export default {
       textMemo: {
         color: "#828282"
       },
-      editTooltip: "Edit Task",
-      deleteTooltip: "Remove",
-      pieChart: {
-        data: {
-          labels: ["40%", "20%", "40%"],
-          series: [40, 20, 40]
-        }
+      //form-StyleInput & StyleSelect
+      boxPDStyles: {
+        marginTop: "25px"
+      },
+      inputGroupStyle: {
+        backgroundColor: "black",
+        width: "100%",
+        height: "40px"
+      },
+      inputBlackBoxStyle: {
+        backgroundColor: "black",
+        borderWidth: "0px",
+        height: "40px",
+        color: "white"
+      },
+      listInputStyle: {
+        width: "100%",
+        maxWidth: "100%"
+      },
+      selectTextColor: {
+        color: "#828282"
       }
     };
   },
@@ -173,4 +291,30 @@ export default {
   }
 };
 </script>
-<style></style>
+<style lang="scss">
+.myselect {
+  position: relative;
+  width: 100%;
+  display: inline-block;
+}
+.myselect select {
+  height: 40px;
+  color: white;
+  border-color: black;
+  background-color: black;
+  padding-left: 10px;
+  outline: none;
+}
+.myselect::after {
+  content: "";
+  position: absolute;
+  right: 10px;
+  top: 17px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  border-top: 10px solid #fac234;
+  pointer-events: none;
+}
+</style>

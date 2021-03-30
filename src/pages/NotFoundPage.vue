@@ -63,8 +63,8 @@
           <i class="fa fa-heart heart"></i> by
           <a href="https://binarcode.com" target="_blank">BinarCode</a>.
           Designed by
-          <a href="https://www.creative-tim.com/?ref=pdf-vuejs" target="_blank"
-            >Creative Tim</a
+          <a href="https://github.com/KantapatKiie/vue-master" target="_blank"
+            >Kantapat</a
           >.
         </div>
       </div>

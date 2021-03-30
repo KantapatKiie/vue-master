@@ -9,8 +9,7 @@
           <input
             type="text"
             id="userId"
-            disabled
-            placeholder="VIP : "
+            v-model="user.userId"
             :style="inputViewUser"
           />
         </div>
@@ -40,9 +39,11 @@
       <div :style="imageCard" class="imageClass">
         <div class="wrapper-full-page" :style="marginToTop">
           <div class="form-group">
-            <label for="exampleInputEmail1" :style="labelStyleInput"
-              >ชื่อเข้าระบบ</label
-            >
+            <div class="col-sm-6">
+              <label for="exampleInputEmail1" :style="labelStyleInput"
+                >ชื่อเข้าระบบ</label
+              >
+            </div>
             <input
               type="email"
               class="form-control"
@@ -53,9 +54,11 @@
             />
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1" :style="labelStyleInput"
-              >รหัสผ่าน</label
-            >
+            <div class="col-sm-6">
+              <label for="exampleInputEmail1" :style="labelStyleInput"
+                >รหัสผ่าน</label
+              >
+            </div>
             <input
               type="email"
               class="form-control"
@@ -86,6 +89,9 @@
 export default {
   data() {
     return {
+      user: {
+        userId: "  VIP  :  0908566930"
+      },
       nav2Styles: {
         backgroundColor: "black"
       },
@@ -100,7 +106,8 @@ export default {
         height: "45%",
         marginTop: "25px",
         backgroundColor: "#383838",
-        borderRadius: "4px"
+        borderRadius: "4px",
+        color: "white"
       },
       textCenter1: {
         textAlign: "center",

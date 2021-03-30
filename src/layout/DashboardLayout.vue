@@ -36,46 +36,37 @@
       </template>
     </side-bar> -->
     <div class="row justify-content-md-center">
-      <div class="col-lg-4" >
+      <div class="col-lg-4">
         <top-navbar></top-navbar>
         <dashboard-content @click="toggleSidebar"> </dashboard-content>
         <content-footer></content-footer>
         <!-- <mobile-menu></mobile-menu> -->
+        <!-- <nav class="menu">
+          <input
+            type="checkbox"
+            href="#"
+            class="menu-open"
+            name="menu-open"
+            id="menu-open"
+          />
+          <label class="menu-open-button" for="menu-open">
+            <span class="lines line-1"></span>
+            <span class="lines line-2"></span>
+            <span class="lines line-3"></span>
+          </label>
+
+          <a href="#" class="menu-item blue"> <i class="fa fa-anchor"></i> </a>
+          <a href="#" class="menu-item green"> <i class="fa fa-coffee"></i> </a>
+          <a href="#" class="menu-item red"> <i class="fa fa-heart"></i> </a>
+          <a href="#" class="menu-item purple">
+            <i class="fa fa-microphone"></i>
+          </a>
+          <a href="#" class="menu-item orange"> <i class="fa fa-star"></i> </a>
+          <a href="#" class="menu-item lightblue">
+            <i class="fa fa-diamond"></i>
+          </a>
+        </nav> -->
       </div>
-      <!-- Toggle -->
-      <!-- <div class="col-lg-3">
-        <circle-menu
-          type="bottom"
-          :number="4"
-          animate="animated"
-          mask="black"
-          circle
-          class="navbar-transparent"
-          colors="white"
-        >
-          <i slot="item_btn" class="fa fa-bars fa-lg" :style="btnToggle"></i>
-          <i
-            slot="item_1"
-            class="fa fa-twitch fa-lg"
-            :style="colorMenuToggle"
-          ></i>
-          <i
-            slot="item_2"
-            class="fa fa-weixin fa-lg"
-            :style="colorMenuToggle"
-          ></i>
-          <i
-            slot="item_3"
-            class="fa fa-weibo fa-lg"
-            :style="colorMenuToggle"
-          ></i>
-          <i
-            slot="item_4"
-            class="fa fa-twitter fa-lg"
-            :style="colorMenuToggle"
-          ></i>
-        </circle-menu>
-      </div> -->
     </div>
   </div>
 </template>
@@ -85,7 +76,6 @@ import TopNavbar from "./TopNavbar.vue";
 import ContentFooter from "./ContentFooter.vue";
 import DashboardContent from "./Content.vue";
 import MobileMenu from "./MobileMenu.vue";
-import CircleMenu from "vue-circle-menu";
 
 export default {
   components: {
@@ -93,7 +83,6 @@ export default {
     DashboardContent,
     ContentFooter,
     MobileMenu,
-    CircleMenu
   },
   data() {
     return {
@@ -112,8 +101,8 @@ export default {
       btnToggle: {
         color: "white"
       },
-      flexStyleBody:{
-        flex: "0.5",
+      flexStyleBody: {
+        flex: "0.5"
       }
     };
   },

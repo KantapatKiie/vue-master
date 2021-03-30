@@ -10,27 +10,44 @@
             <div class="divider"></div>
             <a class="dropdown-item" href="#">Other language</a>
           </base-dropdown> -->
-          <li class="nav-item">
-            <a class="navbar-brand" href="#/admin/register">
-              <img
-                class="avatar border-gray"
-                src="img/newImage/BT_PlayGame.png"
-                alt="..."
-                :style="navIconRight"
-              />
-            </a>
-          </li>
+          <div class="row justify-content-md-center">
+            <li class="nav-item">
+              <a class="navbar-brand" href="#/admin/account">
+                <img
+                  class="avatar border-gray"
+                  src="img/newImage/home.png"
+                  alt="..."
+                  :style="navIconRight"
+                />
+              </a>
+            </li>
+          </div>
           <li class="nav-item">&nbsp;&nbsp;&nbsp;</li>
-          <li class="nav-item">
-            <a class="navbar-brand" href="#/admin/register">
-              <img
-                class="avatar border-gray"
-                src="img/newImage/logout.png"
-                alt="..."
-                :style="navIconRight"
-              />
-            </a>
-          </li>
+          <div class="row justify-content-md-center">
+            <li class="nav-item">
+              <a class="navbar-brand" href="#/admin/register">
+                <img
+                  class="avatar border-gray"
+                  src="img/newImage/BT_PlayGame.png"
+                  alt="..."
+                  :style="navIconRight"
+                />
+              </a>
+            </li>
+          </div>
+          <li class="nav-item">&nbsp;&nbsp;&nbsp;</li>
+          <div class="row justify-content-md-center">
+            <li class="nav-item">
+              <a class="navbar-brand" href="#/admin/register">
+                <img
+                  class="avatar border-gray"
+                  src="img/newImage/logout.png"
+                  alt="..."
+                  :style="navIconRight"
+                />
+              </a>
+            </li>
+          </div>
         </ul>
       </div>
     </div>
