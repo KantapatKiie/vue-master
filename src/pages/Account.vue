@@ -9,19 +9,18 @@
           <input
             type="text"
             id="userId"
-            disabled
-            placeholder="VIP : "
+            v-model="user.userId"
             :style="inputViewUser"
           />
         </div>
       </div>
-      <br /><br />
+      <br />
       <!-- menu-list1 -->
       <div class="row justify-content-md-center" :style="pdMenuList1">
         <div class="col-sm">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_01.png"
               alt="..."
               :style="imageMenuList"
@@ -31,7 +30,7 @@
         <div class="col-sm">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_02.png"
               alt="..."
               :style="imageMenuList"
@@ -41,7 +40,7 @@
         <div class="col-sm">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_03.png"
               alt="..."
               :style="imageMenuList"
@@ -51,7 +50,7 @@
         <div class="col-sm">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_04.png"
               alt="..."
               :style="imageMenuList"
@@ -76,7 +75,7 @@
               <div class="col-sm-3">
                 <a class="navbar-brand" href="#/admin/register">
                   <img
-                    class="avatar border-gray"
+                    class="img-responsive center-block d-block mx-auto"
                     src="img/newImage/BT_Gotoplay.png"
                     :style="openGameImage"
                   />
@@ -92,31 +91,32 @@
       </div>
 
       <!-- menu-list2 -->
+      <br />
       <div class="row justify-content-md-center" :style="pdMenuList2">
-        <div class="col-sm">
+        <div class="col-sm-4 ">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_05.png"
               alt="..."
               :style="imageMenuList2"
             />
           </a>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-4">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_06.png"
               alt="..."
               :style="imageMenuList21"
             />
           </a>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-4">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_07.png"
               alt="..."
               :style="imageMenuList2"
@@ -125,30 +125,30 @@
         </div>
       </div>
       <div class="row justify-content-md-center" :style="pdMenuList2">
-        <div class="col-sm">
+        <div class="col-sm-4">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_08.png"
               alt="..."
               :style="imageMenuList2"
             />
           </a>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-4">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_09.png"
               alt="..."
               :style="imageMenuList2"
             />
           </a>
         </div>
-        <div class="col-sm">
+        <div class="col-sm-4">
           <a class="navbar-brand" href="#/admin/register">
             <img
-              class="avatar border-gray"
+              class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_010.png"
               alt="..."
               :style="imageMenuList2"
@@ -157,7 +157,7 @@
         </div>
       </div>
     </div>
-    <br /><br />
+    <br />
   </div>
 </template>
 <script>
@@ -171,6 +171,9 @@ export default {
   },
   data() {
     return {
+      user: {
+        userId: "  VIP  :  0908566930"
+      },
       nav2Styles: {
         backgroundColor: "black"
       },
@@ -182,7 +185,8 @@ export default {
         height: "45%",
         marginTop: "25px",
         backgroundColor: "#383838",
-        borderRadius: "4px"
+        borderRadius: "4px",
+        color: "white"
       },
       imageCard: {
         backgroundImage: "url(img/newImage/BG_Detail01.png)",
@@ -194,22 +198,19 @@ export default {
         height: "auto"
       },
       imageMenuList: {
-        width: "70px",
-        marginLeft: "50px"
+        width: "70px"
       },
       imageMenuList2: {
         width: "70px"
       },
       imageMenuList21: {
-        width: "115px",
-        marginLeft: "-20px"
+        width: "115px"
       },
       pdMenuList1: {
-        marginLeft: "15px",
-        marginBottom: "50px"
+        marginTop: "50px",
+        marginBottom: "25px"
       },
       pdMenuList2: {
-        marginLeft: "120px",
         marginBottom: "50px"
       },
       openGameImage: {

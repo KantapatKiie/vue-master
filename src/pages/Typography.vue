@@ -5,44 +5,44 @@
         <div class="col-12">
           <card>
             <template slot="header">
-              <h4 class="card-title">Light Bootstrap Table Heading</h4>
+              <h4 class="card-title"> Bootstrap Table Heading</h4>
               <p class="card-category">Created using Roboto Font Family</p>
             </template>
             <div class="typo-line">
               <h1>
                 <p class="category">Header 1</p>
-                Light Bootstrap Table Heading
+                 Bootstrap Table Heading
               </h1>
             </div>
 
             <div class="typo-line">
               <h2>
                 <p class="category">Header 2</p>
-                Light Bootstrap Table Heading
+                 Bootstrap Table Heading
               </h2>
             </div>
             <div class="typo-line">
               <h3>
                 <p class="category">Header 3</p>
-                Light Bootstrap Table Heading
+                 Bootstrap Table Heading
               </h3>
             </div>
             <div class="typo-line">
               <h4>
                 <p class="category">Header 4</p>
-                Light Bootstrap Table Heading
+                 Bootstrap Table Heading
               </h4>
             </div>
             <div class="typo-line">
               <h5>
                 <p class="category">Header 5</p>
-                Light Bootstrap Table Heading
+                 Bootstrap Table Heading
               </h5>
             </div>
             <div class="typo-line">
               <h6>
                 <p class="category">Header 6</p>
-                Light Bootstrap Table Heading
+                 Bootstrap Table Heading
               </h6>
             </div>
             <div class="typo-line">
@@ -80,23 +80,23 @@
                -->
               <p class="category">Coloured Text</p>
               <p class="text-primary">
-                Text Primary - Light Bootstrap Table Heading and complex
+                Text Primary -  Bootstrap Table Heading and complex
                 bootstrap dashboard you've ever seen on the internet.
               </p>
               <p class="text-info">
-                Text Info - Light Bootstrap Table Heading and complex bootstrap
+                Text Info -  Bootstrap Table Heading and complex bootstrap
                 dashboard you've ever seen on the internet.
               </p>
               <p class="text-success">
-                Text Success - Light Bootstrap Table Heading and complex
+                Text Success -  Bootstrap Table Heading and complex
                 bootstrap dashboard you've ever seen on the internet.
               </p>
               <p class="text-warning">
-                Text Warning - Light Bootstrap Table Heading and complex
+                Text Warning -  Bootstrap Table Heading and complex
                 bootstrap dashboard you've ever seen on the internet.
               </p>
               <p class="text-danger">
-                Text Danger - Light Bootstrap Table Heading and complex
+                Text Danger -  Bootstrap Table Heading and complex
                 bootstrap dashboard you've ever seen on the internet.
               </p>
             </div>

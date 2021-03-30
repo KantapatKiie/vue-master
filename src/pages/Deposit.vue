@@ -9,8 +9,7 @@
           <input
             type="text"
             id="userId"
-            disabled
-            placeholder="VIP : "
+            v-model="user.userId"
             :style="inputViewUser"
           />
         </div>
@@ -92,9 +91,12 @@ export default {
   },
   data() {
     return {
+      user: {
+        userId: "  VIP  :  0908566930"
+      },
       bank: {
         bankName: "   ธนาคารไทยพาณิชย์",
-        bankNumber: "   0908566930",
+        bankNumber: "   0908566930"
       },
       nav2Styles: {
         backgroundColor: "black"
@@ -107,7 +109,8 @@ export default {
         height: "45%",
         marginTop: "25px",
         backgroundColor: "#383838",
-        borderRadius: "4px"
+        borderRadius: "4px",
+        color: "white"
       },
       inputBankText: {
         width: "90%",
@@ -115,9 +118,9 @@ export default {
         margin: "25px",
         backgroundColor: "#212121",
         borderRadius: "4px",
-        color:"white",
-        fontSize:"25px",
-        fontFamily:"Segoe UI"
+        color: "white",
+        fontSize: "25px",
+        fontFamily: "Segoe UI"
       },
       labelMemoText: {
         color: "red",

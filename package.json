@@ -1,9 +1,9 @@
 {
-  "name": "vue-exams",
+  "name": "vue-web-master",
   "version": "1.0.0",
   "private": true,
-  "description": "Vue bootstrap",
-  "author": "Kantapat",
+  "description": "Vue Master",
+  "author": "Kantapat Dev",
   "scripts": {
     "start": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
@@ -15,13 +15,10 @@
   "dependencies": {
     "bootstrap": "^5.0.0-beta3",
     "chartist": "^0.11.0",
-    "google-maps": "^3.2.1",
     "register-service-worker": "^1.5.2",
     "v-tooltip": "^2.0.0-rc.33",
     "vue": "^2.6.6",
-    "vue-circle-menu": "^1.1.1",
-    "vue-router": "^3.0.2",
-    "vue2-google-maps": "^0.8.4"
+    "vue-router": "^3.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",
