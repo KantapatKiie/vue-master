@@ -825,3 +825,19 @@
 .documentation .dropdown .dropdown-menu.show {
   transform: translate3d(0, 39px, 0) !important;
 }
+
+.kanitFonts1 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  /* font-size: 20px; */
+}
+.kanitFonts2 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  /* font-size: 20px; */
+}
+.kanitFonts3 {
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+  /* font-size: 20px; */
+}

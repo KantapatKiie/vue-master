@@ -1,11 +1,11 @@
 <template>
-  <div class="card-body" :style="backImage">
+  <div class="card-body" :style="nav2Styles">
     <br />
     <div class="container-fluid">
-      <h2 slot="header" class="card-title" :style="textCenter">
+      <h2 slot="header" class="card-title kanitFonts3" :style="textCenter">
         ยินดีต้อนรับ
       </h2>
-      <h4 slot="header" class="card-title" :style="textCenter">
+      <h4 slot="header" class="card-title kanitFonts3" :style="textCenter">
         ข้อมูลการสมัครสมาชิกใหม่
       </h4>
     </div>
@@ -19,7 +19,7 @@
                 <div :style="inputGroupStyle">
                   <div class="myselect">
                     <select
-                      class="form-control"
+                      class="myselect"
                       v-model="user.accbank"
                       :style="selectTextColor"
                     >
@@ -45,7 +45,6 @@
                 <div :style="inputGroupStyle">
                   <input
                     type="search"
-                    class="form-control"
                     aria-describedby="addon-right addon-left"
                     placeholder="เลขที่บัญชี.."
                     maxlength="16"
@@ -68,7 +67,6 @@
                 <div :style="inputGroupStyle">
                   <input
                     type="search"
-                    class="form-control"
                     aria-describedby="addon-right addon-left"
                     placeholder="ชื่อ - นามสกุล (ชื่อบัญชีธนาคาร)"
                     v-model="user.fullname"
@@ -89,8 +87,7 @@
               <div class="col-sm-12">
                 <div :style="inputGroupStyle">
                   <input
-                    type="tel"
-                    class="form-control"
+                    type="search"
                     aria-describedby="addon-right addon-left"
                     placeholder="เบอร์โทรศัพท์"
                     maxlength="10"
@@ -115,7 +112,6 @@
                 <div :style="inputGroupStyle">
                   <input
                     type="search"
-                    class="form-control"
                     aria-describedby="addon-right addon-left"
                     placeholder="รหัสเข้าเล่น (ล็อกอินเข้าสู่ระบบ)"
                     v-model="user.password"
@@ -137,7 +133,7 @@
                 <div :style="inputGroupStyle">
                   <div class="myselect">
                     <select
-                      class="form-control"
+                      class="myselect"
                       v-model="user.knowus"
                       :style="selectTextColor"
                     >
@@ -163,7 +159,7 @@
                 <div :style="inputGroupStyle">
                   <div class="myselect">
                     <select
-                      class="form-control"
+                      class="myselect"
                       v-model="user.promotion"
                       :style="selectTextColor"
                     >
@@ -184,7 +180,7 @@
           </div>
 
           <!-- button register -->
-          <br /><br /><br />
+          <br /><br />
           <div class="text-center">
             <a class="navbar-brand" href="#/admin/register">
               <img
@@ -202,18 +198,6 @@
               กรุณากรอกข้อมูลให้ครบทุกช่อง
             </label>
           </div>
-          <br /><br />
-
-          <!-- <div class="form-group">
-                <label>About Me</label>
-                <textarea
-                  rows="5"
-                  class="form-control border-input"
-                  placeholder="Here can be your description"
-                  v-model="user.aboutMe"
-                >
-                </textarea>
-              </div> -->
         </div>
       </form>
     </div>
@@ -244,8 +228,9 @@ export default {
         aboutMe: ""
       },
 
-      backImage: {
-        backgroundColor: "black"
+      nav2Styles: {
+        backgroundColor: "black",
+        height: "100%"
       },
       textCenter: {
         textAlign: "center",
@@ -262,18 +247,23 @@ export default {
       },
       //form-StyleInput & StyleSelect
       boxPDStyles: {
-        marginTop: "25px"
+        marginTop: "25px",
+        fontFamily:"kanitFonts1"
+
       },
       inputGroupStyle: {
         backgroundColor: "black",
         width: "100%",
-        height: "40px"
+        height: "40px",
+        fontFamily:"kanitFonts1"
       },
       inputBlackBoxStyle: {
         backgroundColor: "black",
         borderWidth: "0px",
-        height: "40px",
-        color: "white"
+        color: "white",
+        width: "100%",
+        height: "50px",
+        fontFamily:"kanitFonts1"
       },
       listInputStyle: {
         width: "100%",
@@ -296,14 +286,18 @@ export default {
   position: relative;
   width: 100%;
   display: inline-block;
+  appearance: none;
+  font-family: "kanitFonts1";
+
 }
 .myselect select {
   height: 40px;
   color: white;
   border-color: black;
   background-color: black;
-  padding-left: 10px;
   outline: none;
+  appearance: none;
+  font-family: "kanitFonts1";
 }
 .myselect::after {
   content: "";
@@ -316,5 +310,8 @@ export default {
   border-right: 5px solid black;
   border-top: 10px solid #fac234;
   pointer-events: none;
+  appearance: none;
+  font-family: "kanitFonts1";
+
 }
 </style>

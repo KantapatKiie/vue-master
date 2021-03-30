@@ -1,15 +1,15 @@
 <template>
-  <nav class="navbar navbar-expand-lg" :data-color="red" :style="myStyle">
+  <nav
+    class="navbar navbar-expand-lg"
+    :data-color="red"
+    :style="backgrondTopNav"
+  >
     <div class="container-fluid">
-      <a class="navbar-brand" href="#/admin/register">LOGO</a>
+      <a class="navbar-brand" href="#/admin/account"
+        ><h2 class="kanitFonts2">LOGO</h2></a
+      >
       <div class="justify-content-end">
         <ul class="navbar-nav ml-auto">
-          <!-- <base-dropdown title="Language">
-            <a class="dropdown-item" href="#">Thai</a>
-            <a class="dropdown-item" href="#">English</a>
-            <div class="divider"></div>
-            <a class="dropdown-item" href="#">Other language</a>
-          </base-dropdown> -->
           <div class="row justify-content-md-center">
             <li class="nav-item">
               <a class="navbar-brand" href="#/admin/account">
@@ -22,7 +22,7 @@
               </a>
             </li>
           </div>
-          <li class="nav-item">&nbsp;&nbsp;&nbsp;</li>
+          <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
           <div class="row justify-content-md-center">
             <li class="nav-item">
               <a class="navbar-brand" href="#/admin/register">
@@ -35,7 +35,7 @@
               </a>
             </li>
           </div>
-          <li class="nav-item">&nbsp;&nbsp;&nbsp;</li>
+          <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
           <div class="row justify-content-md-center">
             <li class="nav-item">
               <a class="navbar-brand" href="#/admin/register">
@@ -64,11 +64,16 @@ export default {
   data() {
     return {
       activeNotifications: false,
-      myStyle: {
-        backgroundColor: "#383838"
+      backgrondTopNav: {
+        // backgroundColor: "#383838",
+        backgroundImage: "url(img/newImage/BG_Menubar.jpg)",
+        backgroundSize: "contain",
+        backgroundSize: "no-repeat",
+        width: "100%",
+        height: "150px"
       },
       navIconRight: {
-        width: "40px"
+        width: "80px"
       }
     };
   },
