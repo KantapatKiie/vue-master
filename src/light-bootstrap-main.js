@@ -7,8 +7,7 @@ import SideBar from "./components/SidebarPlugin";
 // asset imports
 import "bootstrap/dist/css/bootstrap.css";
 import "./assets/sass/light-bootstrap-dashboard.scss";
-import "./assets/css/demo.css";
-import "./assets/css/circleMenu.css";
+import "./assets/css/stylesheet.css";
 
 export default {
   install(Vue) {

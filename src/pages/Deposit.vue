@@ -1,48 +1,39 @@
 <template>
   <div class="card-body" :style="nav2Styles">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div :style="imageLogoUser" class="imageLogoUserClass"></div>
-        </div>
-        <div class="col-lg-9">
+    <div class="container-fluid">
+      <br />
+      <div class="col-sm-12 text-center">
+        <h2 slot="header" class="card-title kanitFonts3" :style="textColerHeader">
+          ฝากเงินอัตโนมัติ
+        </h2>
+      </div>
+      <br />
+      <div :style="imageBackgroundMain">
+        <div class="col-sm-12">
           <input
             type="text"
             id="userId"
-            v-model="user.userId"
-            :style="inputViewUser"
+            disabled
+            class="kanitFonts1"
+            placeholder="ธนาคารไทยพาณิชย์"
+            :style="inputBankText"
+            v-model="bank.bankName"
           />
+          <input
+            type="text"
+            id="userId"
+            disabled
+            class="kanitFonts1"
+            placeholder="0908566930"
+            :style="inputBankText"
+            v-model="bank.bankNumber"
+          />
+          <h4 :style="labelMemoText" class="kanitFonts1">
+            *ควรใช้บัญชีข้างบนในการฝากเงินเท่านั้น
+          </h4>
         </div>
-      </div>
-      <br />
-      <div class="container">
-        <h2 slot="header" class="card-title" :style="textCenter">
-          ฝากเงินอัตโนมัติ
-        </h2>
-        <div class="container" :style="imageBorder">
-          <div class="col-12">
-            <input
-              type="text"
-              id="userId"
-              disabled
-              placeholder="ธนาคารไทยพาณิชย์"
-              :style="inputBankText"
-              v-model="bank.bankName"
-            />
-            <input
-              type="text"
-              id="userId"
-              disabled
-              placeholder="0908566930"
-              :style="inputBankText"
-              v-model="bank.bankNumber"
-            />
-            <h4 :style="labelMemoText">
-              *ควรใช้บัญชีข้างบนในการฝากเงินเท่านั้น
-            </h4>
-          </div>
-
-          <div class="row justify-content-md-center">
+        <div class="row justify-content-md-center">
+          <div class="col-sm-4">
             <img
               class="avatar border-gray"
               src="img/newImage/Text_H01.png"
@@ -50,34 +41,43 @@
               :style="imageDeposit"
             />
           </div>
-          <br />
-          <div class="row justify-content-md-center">
+        </div>
+        <br />
+        <div class="row justify-content-md-center">
+          <div class="col-sm-8">
             <img
               class="avatar border-gray"
               src="img/newImage/SCB_Logo.jpg"
-              alt="..."
-              :style="imageBankMain"
-            />
-          </div>
-          <br />
-          <div class="row justify-content-md-center">
-            <img
-              class="avatar border-gray"
-              src="img/newImage/BT_Copy.png"
-              alt="..."
-              :style="imageRowBottom"
-            />
-            <img
-              class="avatar border-gray"
-              src="img/newImage/BT_Check.png"
               alt="..."
               :style="imageRowBottom"
             />
           </div>
         </div>
+        <br /><br />
+        <div class="row justify-content-md-center">
+          <div class="col-sm-4">
+            <a class="navbar-brand" href="#/admin/register">
+              <img
+                class="avatar border-gray"
+                src="img/newImage/BT_Copy.png"
+                alt="..."
+                :style="imageRowBottom"
+              />
+            </a>
+          </div>
+          <div class="col-sm-4">
+            <a class="navbar-brand" href="#/admin/register">
+              <img
+                class="avatar border-gray"
+                src="img/newImage/BT_Check.png"
+                alt="..."
+                :style="imageRowBottom"
+              />
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <br />
   </div>
 </template>
 <script>
@@ -99,7 +99,8 @@ export default {
         bankNumber: "   0908566930"
       },
       nav2Styles: {
-        backgroundColor: "black"
+        backgroundColor: "black",
+        height: "100%"
       },
       imageLogoUser: {
         backgroundImage: "url(img/newImage/Profile_Picture.png)"
@@ -120,18 +121,17 @@ export default {
         borderRadius: "4px",
         color: "white",
         fontSize: "25px",
-        fontFamily: "Segoe UI"
+        fontFamily: "kanitFonts1"
       },
       labelMemoText: {
         color: "red",
         fontSize: "20px",
         textAlign: "center"
       },
-      textCenter: {
-        textAlign: "center",
+      textColerHeader: {
         color: "#ffd373"
       },
-      imageBorder: {
+      imageBackgroundMain: {
         backgroundImage: "url(img/newImage/backgroungImage.png)",
         width: "100%",
         height: "700px",
@@ -140,14 +140,10 @@ export default {
         backgroundRepeat: "no-repeat"
       },
       imageDeposit: {
-        width: "250px"
-      },
-      imageBankMain: {
-        width: "500px",
-        backgroundSize: "contain"
+        width: "100%"
       },
       imageRowBottom: {
-        width: "250px"
+        width: "100%"
       }
     };
   }

@@ -1,33 +1,14 @@
 <template>
   <div class="card-body" :style="nav2Styles">
     <div class="container-fluid">
-      <div :style="itemTextCenter">
-        <h2 slot="header" class="card-title kanitFonts3" :style="textCenter1">
-          การสมัครของคุณสำเร็จ
-        </h2>
-        <div class="col-lg-12">
-          <h4 class="kanitFonts2" :style="textCenter2">
-            ขอบคุณสำหรับการสมัครสมาชิก
-          </h4>
-        </div>
-        <div class="col-lg-12">
-          <h5 slot="header" class="card-title kanitFonts2" :style="textCenter2">
-            คุณสามารถใช้ชื่อผู้ใช้
-          </h5>
-        </div>
-
-        <div class="col-lg-12">
-          <h5 slot="header" class="card-title kanitFonts2" :style="textCenter2">
-            และรหัสผ่านนี้ เพื่อทำการเข้าสู่ระบบ
-          </h5>
-        </div>
-      </div>
       <br /><br />
-      <div :style="imageCard" class="imageClass">
+      <div :style="imageCard" class="container">
         <div class="wrapper-full-page" :style="marginToTop">
           <div class="form-group">
             <div class="col-sm-6">
-              <h2 class="kanitFonts3" :style="labelStyleInput">ชื่อเข้าระบบ</h2>
+              <label for="exampleInputEmail1" :style="labelStyleInput"
+                >เบอร์โทรศัพท์</label
+              >
             </div>
             <input
               type="email"
@@ -40,7 +21,9 @@
           </div>
           <div class="form-group">
             <div class="col-sm-6">
-              <h2 class="kanitFonts3" :style="labelStyleInput">รหัสผ่าน</h2>
+              <label for="exampleInputEmail1" :style="labelStyleInput"
+                >รหัสผ่าน</label
+              >
             </div>
             <input
               type="email"
@@ -121,6 +104,10 @@ export default {
         width: "25%"
       },
       imageCard: {
+        width: "100%",
+        height: "100%",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
         backgroundImage: "url(img/newImage/BG_Detail01.png)"
       },
       imageLogoUser: {
@@ -131,20 +118,13 @@ export default {
 };
 </script>
 <style lang="scss">
-.imageClass {
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: "center";
-}
-.imageLogoUserClass {
-  height: 120px;
-  width: 120px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @media (max-width: 988px) {
-    background-size: cover;
-  }
-}
+// .imageLogoUserClass {
+//   height: 120px;
+//   width: 120px;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   @media (max-width: 988px) {
+//     background-size: cover;
+//   }
+// }
 </style>

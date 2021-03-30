@@ -2,14 +2,14 @@ import DashboardLayout from "../layout/DashboardLayout.vue";
 // GeneralViews
 
 // Admin pages
+import Login from "src/pages/Login.vue";
 import Register from "src/pages/Register.vue";
 import Account from "src/pages/Account.vue";
 import ConfirmRegister from "src/pages/ConfirmRegister.vue";
 import Deposit from "src/pages/Deposit.vue";
+import Withdraw from "src/pages/Withdraw.vue";
 
-import UserProfile from "src/pages/UserProfile.vue";
 import Typography from "src/pages/Typography.vue";
-import Icons from "src/pages/Icons.vue";
 import Notifications from "src/pages/Notifications.vue";
 
 import NotFound from "../pages/NotFoundPage.vue";
@@ -26,34 +26,14 @@ const routes = [
     redirect: "/admin/account",
     children: [
       {
+        path: "login",
+        name: "Login",
+        component: Login
+      },
+      {
         path: "register",
         name: "Register",
         component: Register
-      },
-      {
-        path: "user",
-        name: "User",
-        component: UserProfile
-      },
-      {
-        path: "account",
-        name: "Account",
-        component: Account
-      },
-      {
-        path: "typography",
-        name: "Typography",
-        component: Typography
-      },
-      {
-        path: "icons",
-        name: "Icons",
-        component: Icons
-      },
-      {
-        path: "notifications",
-        name: "Notifications",
-        component: Notifications
       },
       {
         path: "confirm-register",
@@ -61,10 +41,30 @@ const routes = [
         component: ConfirmRegister
       },
       {
+        path: "account",
+        name: "Account",
+        component: Account
+      },
+      {
         path: "deposit-money",
         name: "Deposit Money",
         component: Deposit
-      }
+      },
+      {
+        path: "withdraw-money",
+        name: "Withdraw Money",
+        component: Withdraw
+      },
+      {
+        path: "typography",
+        name: "Typography",
+        component: Typography
+      },
+      {
+        path: "notifications",
+        name: "Notifications",
+        component: Notifications
+      },
     ]
   },
   { path: "*", component: NotFound }

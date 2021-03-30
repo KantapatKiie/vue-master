@@ -1,40 +1,35 @@
 <template>
-  <footer class="navbar mr-auto" :style="navBars">
+  <footer class="navbar mr-auto" :style="backgrondFooter">
     <div class="container-fluid">
       <a class="navbar-brand" href="#/admin/account" :style="menuList"
         ><img
           class="avatar border-gray"
           src="img/newImage/BT_Account.png"
           alt="..."
-          :style="menuListImage"
       /></a>
       <a class="navbar-brand" href="#/admin/deposit-money" :style="menuList"
         ><img
           class="avatar border-gray"
           src="img/newImage/BT_Deposit.png"
           alt="..."
-          :style="menuListImage2"
       /></a>
-      <a class="navbar-brand" href="#/admin/register" :style="menuList"
+      <a class="navbar-brand" href="#/admin/withdraw-money" :style="menuList"
         ><img
           class="avatar border-gray"
           src="img/newImage/BT_Withdraw.png"
           alt="..."
-          :style="menuListImage2"
       /></a>
-      <a class="navbar-brand" href="#/admin/confirm-register" :style="menuList"
+      <a class="navbar-brand" href="#/admin/register" :style="menuList"
         ><img
           class="avatar border-gray"
           src="img/newImage/BT_History.png"
           alt="..."
-          :style="menuListImage"
       /></a>
-      <a class="navbar-brand" href="#/admin/icons" :style="menuList"
+      <a class="navbar-brand" href="#/admin/confirm-register" :style="menuList"
         ><img
           class="avatar border-gray"
           src="img/newImage/BT_Contact.png"
           alt="..."
-          :style="menuListImage"
       /></a>
     </div>
   </footer>
@@ -43,17 +38,15 @@
 export default {
   data() {
     return {
-      navBars: {
-        backgroundColor: "#383838"
+      backgrondFooter: {
+        backgroundImage: "url(img/newImage/BG_Menubar.jpg)",
+        backgroundSize: "contain",
+        backgroundSize: "no-repeat",
+        width: "100%",
+        height: "150px"
       },
       menuList: {
         color: "#828282"
-      },
-      menuListImage: {
-        width: "30px"
-      },
-      menuListImage2: {
-        width: "40px"
       }
     };
   }

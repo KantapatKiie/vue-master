@@ -1,20 +1,7 @@
 <template>
   <div class="card-body" :style="nav2Styles">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div :style="imageLogoUser" class="imageLogoUserClass"></div>
-        </div>
-        <div class="col-lg-9">
-          <input
-            type="text"
-            id="userId"
-            v-model="user.userId"
-            :style="inputViewUser"
-          />
-        </div>
-      </div>
-      <br />
+      <br /><br />
       <!-- menu-list1 -->
       <div class="row justify-content-md-center" :style="pdMenuList1">
         <div class="col-sm">
@@ -23,7 +10,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_01.png"
               alt="..."
-              :style="imageMenuList"
             />
           </a>
         </div>
@@ -33,7 +19,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_02.png"
               alt="..."
-              :style="imageMenuList"
             />
           </a>
         </div>
@@ -43,7 +28,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_03.png"
               alt="..."
-              :style="imageMenuList"
             />
           </a>
         </div>
@@ -53,39 +37,35 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_04.png"
               alt="..."
-              :style="imageMenuList"
             />
           </a>
         </div>
       </div>
 
       <!-- main-price -->
-      <div :style="imageCard" class="container ">
+      <div :style="imageCardBG" class="container">
         <div class="container">
-          <div class="row ">
-            <div class="row justify-content-between col">
-              <div class="col">
-                <h2>รายการเครดิต</h2>
-
-                <h2 slot="header" class="card-title" :style="textCenter2">
-                  100,000.00 ฿
-                </h2>
-                <br />
-              </div>
-              <div class="col-sm-3">
-                <a class="navbar-brand" href="#/admin/register">
-                  <img
-                    class="img-responsive center-block d-block mx-auto"
-                    src="img/newImage/BT_Gotoplay.png"
-                    :style="openGameImage"
-                  />
-                </a>
-              </div>
+          <div class="row justify-content-between">
+            <div class="col-sm-8">
+              <h1 class="kanitFonts1">รายการเครดิต</h1>
+              <h1 class="kanitFonts3">100,000.00 ฿</h1>
             </div>
-            <h4>คำอธิบายรายละเอียดรายการเครดิต</h4>
-            <h5>
+            <div class="col-sm-3">
+              <a class="navbar-brand" href="#/admin/register">
+                <img
+                  class="img-responsive center-block d-block mx-auto"
+                  src="img/newImage/BT_Gotoplay.png"
+                  :style="openGameImage"
+                />
+              </a>
+            </div>
+          </div>
+          <br /><br /><br />
+          <div class="row justify-content-start">
+            <h3 class="kanitFonts2">คำอธิบายรายละเอียดรายการเครดิต</h3>
+            <h3 class="kanitFonts2">
               เพื่อความรวดเร็วในการทำการถอน แนะนำให้ใช้ธนาคารเดียวกับที่ฝากเงิน
-            </h5>
+            </h3>
           </div>
         </div>
       </div>
@@ -99,7 +79,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_05.png"
               alt="..."
-              :style="imageMenuList2"
             />
           </a>
         </div>
@@ -109,7 +88,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_06.png"
               alt="..."
-              :style="imageMenuList21"
             />
           </a>
         </div>
@@ -119,7 +97,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_07.png"
               alt="..."
-              :style="imageMenuList2"
             />
           </a>
         </div>
@@ -131,7 +108,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_08.png"
               alt="..."
-              :style="imageMenuList2"
             />
           </a>
         </div>
@@ -141,7 +117,6 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_09.png"
               alt="..."
-              :style="imageMenuList2"
             />
           </a>
         </div>
@@ -151,13 +126,11 @@
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_010.png"
               alt="..."
-              :style="imageMenuList2"
             />
           </a>
         </div>
       </div>
     </div>
-    <br />
   </div>
 </template>
 <script>
@@ -175,7 +148,8 @@ export default {
         userId: "  VIP  :  0908566930"
       },
       nav2Styles: {
-        backgroundColor: "black"
+        backgroundColor: "black",
+        height: "100%"
       },
       imageLogoUser: {
         backgroundImage: "url(img/newImage/Profile_Picture.png)"
@@ -188,33 +162,26 @@ export default {
         borderRadius: "4px",
         color: "white"
       },
-      imageCard: {
+      imageCardBG: {
         backgroundImage: "url(img/newImage/BG_Detail01.png)",
-        marginTop: "50px",
-        marginBottom: "50px",
+        marginTop: "5%",
+        marginBottom: "5%",
         backgroundSize: "contain",
-        // backgroundPosition:"center",
-        width: "100%",
-        height: "auto"
-      },
-      imageMenuList: {
-        width: "70px"
-      },
-      imageMenuList2: {
-        width: "70px"
-      },
-      imageMenuList21: {
-        width: "115px"
+        // backgroundPosition: "center",
+        backgroundSize: "no-repeat",
+        width: "1016px",
+        height: "407px"
       },
       pdMenuList1: {
         marginTop: "50px",
         marginBottom: "25px"
       },
       pdMenuList2: {
-        marginBottom: "50px"
+        marginBottom: "25px"
       },
       openGameImage: {
-        width: "170px"
+        width: "100%",
+        marginTop: "5%"
       }
     };
   }
