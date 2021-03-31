@@ -17,9 +17,9 @@
             <div class="row">
               <div class="col-sm-12">
                 <div :style="inputGroupStyle">
-                  <div class="myselect">
+                  <div class="custom-select">
                     <select
-                      class="myselect"
+                      class="custom-select"
                       v-model="user.accbank"
                       :style="selectTextColor"
                     >
@@ -45,7 +45,7 @@
                 <div :style="inputGroupStyle">
                   <input
                     type="search"
-                    aria-describedby="addon-right addon-left"
+                    class="kanitFonts2"
                     placeholder="เลขที่บัญชี.."
                     maxlength="16"
                     v-model="user.banknumber"
@@ -67,7 +67,7 @@
                 <div :style="inputGroupStyle">
                   <input
                     type="search"
-                    aria-describedby="addon-right addon-left"
+                    class="kanitFonts2"
                     placeholder="ชื่อ - นามสกุล (ชื่อบัญชีธนาคาร)"
                     v-model="user.fullname"
                     :style="inputBlackBoxStyle"
@@ -88,7 +88,7 @@
                 <div :style="inputGroupStyle">
                   <input
                     type="search"
-                    aria-describedby="addon-right addon-left"
+                    class="kanitFonts2"
                     placeholder="เบอร์โทรศัพท์"
                     maxlength="10"
                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
@@ -112,7 +112,7 @@
                 <div :style="inputGroupStyle">
                   <input
                     type="search"
-                    aria-describedby="addon-right addon-left"
+                    class="kanitFonts2"
                     placeholder="รหัสเข้าเล่น (ล็อกอินเข้าสู่ระบบ)"
                     v-model="user.password"
                     :style="inputBlackBoxStyle"
@@ -131,9 +131,9 @@
             <div class="row">
               <div class="col-sm-12">
                 <div :style="inputGroupStyle">
-                  <div class="myselect">
+                  <div class="custom-select">
                     <select
-                      class="myselect"
+                      class="custom-select"
                       v-model="user.knowus"
                       :style="selectTextColor"
                     >
@@ -157,9 +157,9 @@
             <div class="row">
               <div class="col-sm-12">
                 <div :style="inputGroupStyle">
-                  <div class="myselect">
+                  <div class="custom-select">
                     <select
-                      class="myselect"
+                      class="custom-select"
                       v-model="user.promotion"
                       :style="selectTextColor"
                     >
@@ -248,22 +248,22 @@ export default {
       //form-StyleInput & StyleSelect
       boxPDStyles: {
         marginTop: "25px",
-        fontFamily:"kanitFonts1"
-
+        fontFamily: "kanitFonts1"
       },
       inputGroupStyle: {
         backgroundColor: "black",
         width: "100%",
         height: "40px",
-        fontFamily:"kanitFonts1"
+        fontFamily: "kanitFonts2"
       },
       inputBlackBoxStyle: {
         backgroundColor: "black",
         borderWidth: "0px",
         color: "white",
         width: "100%",
-        height: "50px",
-        fontFamily:"kanitFonts1"
+        height: "40px",
+        fontFamily: "kanitFonts2",
+        fontSize: "20px"
       },
       listInputStyle: {
         width: "100%",
@@ -282,36 +282,40 @@ export default {
 };
 </script>
 <style lang="scss">
-.myselect {
+.custom-select {
   position: relative;
+  height: 40px;
   width: 100%;
+  color: white;
   display: inline-block;
   appearance: none;
-  font-family: "kanitFonts1";
-
+  font-family: "kanitFonts2";
 }
-.myselect select {
+
+.custom-select select {
   height: 40px;
-  color: white;
+  // color: white !important;
+  font-size: 20px;
   border-color: black;
-  background-color: black;
+  background-color: black !important;
+  text-transform: uppercase;
   outline: none;
   appearance: none;
-  font-family: "kanitFonts1";
+  font-family: "kanitFonts2";
 }
-.myselect::after {
+.custom-select::after {
   content: "";
   position: absolute;
   right: 10px;
   top: 17px;
   width: 0;
   height: 0;
-  border-left: 5px solid black;
-  border-right: 5px solid black;
+  border-left: 7px solid black;
+  border-right: 7px solid black;
   border-top: 10px solid #fac234;
   pointer-events: none;
   appearance: none;
-  font-family: "kanitFonts1";
-
+  color: white;
+  font-family: "kanitFonts2";
 }
 </style>

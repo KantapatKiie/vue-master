@@ -43,7 +43,6 @@ export default {
         backgroundSize: "contain",
         backgroundSize: "no-repeat",
         width: "100%",
-        height: "150px"
       },
       menuList: {
         color: "#828282"

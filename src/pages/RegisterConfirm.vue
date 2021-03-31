@@ -2,61 +2,53 @@
   <div class="card-body" :style="nav2Styles">
     <div class="container-fluid">
       <div :style="itemTextCenter">
-        <h2 slot="header" class="card-title kanitFonts3" :style="textCenter1">
+        <h1 slot="header" class="card-title kanitFonts3" :style="textCenter1">
           การสมัครของคุณสำเร็จ
-        </h2>
+        </h1>
         <div class="col-lg-12">
-          <h4 class="kanitFonts2" :style="textCenter2">
+          <label class="kanitFonts2" :style="textCenter2">
             ขอบคุณสำหรับการสมัครสมาชิก
-          </h4>
+          </label>
         </div>
         <div class="col-lg-12">
-          <h5 slot="header" class="card-title kanitFonts2" :style="textCenter2">
+          <label class="card-title kanitFonts2" :style="textCenter2">
             คุณสามารถใช้ชื่อผู้ใช้
-          </h5>
+          </label>
         </div>
 
         <div class="col-lg-12">
-          <h5 slot="header" class="card-title kanitFonts2" :style="textCenter2">
+          <label class="card-title kanitFonts2" :style="textCenter2">
             และรหัสผ่านนี้ เพื่อทำการเข้าสู่ระบบ
-          </h5>
+          </label>
         </div>
       </div>
       <br /><br />
-      <div :style="imageCard" class="imageClass">
-        <div class="wrapper-full-page" :style="marginToTop">
-          <div class="form-group">
-            <div class="col-sm-6">
-              <h2 class="kanitFonts3" :style="labelStyleInput">ชื่อเข้าระบบ</h2>
-            </div>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="User Id"
-              :style="inputStyle"
-            />
+      <div class="imageClass" :style="imageCard">
+        <div class="container-fluid" :style="marginToTop">
+          <div class="col-sm-6">
+            <h1 class="kanitFonts3" :style="labelStyleInput">ชื่อเข้าระบบ</h1>
           </div>
-          <div class="form-group">
-            <div class="col-sm-6">
-              <h2 class="kanitFonts3" :style="labelStyleInput">รหัสผ่าน</h2>
-            </div>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-              placeholder="Password"
-              :style="inputStyle"
-            />
+          <input
+            type="email"
+            class="form-control kanitFonts2"
+            placeholder="User Id"
+            :style="inputStyle"
+          />
+          <div class="col-sm-6">
+            <h2 class="kanitFonts3" :style="labelStyleInput">รหัสผ่าน</h2>
           </div>
-          <div :style="itemTextCenter">
+          <input
+            type="email"
+            class="form-control kanitFonts2"
+            placeholder="Password"
+            :style="inputStyle"
+          />
+          <div class="text-center">
             <a class="navbar-brand" href="#/admin/register">
               <img
                 class="avatar border-gray"
                 src="img/newImage/BT_GotoMenu.png"
-                alt="..."
+                alt="Go to main page"
                 :style="imageGotoMainmenu"
               />
             </a>
@@ -86,7 +78,7 @@ export default {
       inputViewUser: {
         width: "90%",
         height: "45%",
-        marginTop: "25px",
+        paddingTop: "15px",
         backgroundColor: "#383838",
         borderRadius: "4px",
         color: "white"
@@ -100,28 +92,34 @@ export default {
       },
       textCenter2: {
         textAlign: "center",
-        color: "white"
+        color: "white",
+        fontSize: "24px"
       },
       marginToTop: {
-        paddingTop: "25px"
+        paddingTop: "5px"
       },
       labelStyleInput: {
         marginLeft: "25px",
         width: "90%",
-        fontSize: "20px"
+        fontSize: "24px"
       },
       inputStyle: {
         backgroundColor: "black",
         borderWidth: "0px",
         margin: "25px",
         width: "90%",
+        height: "60px",
         color: "white"
       },
       imageGotoMainmenu: {
-        width: "25%"
+        width: "22%"
       },
       imageCard: {
-        backgroundImage: "url(img/newImage/BG_Detail01.png)"
+        backgroundImage: "url(img/newImage/BG_Detail01.png)",
+        backgroundSize: "contain no-repeat",
+        // backgroundPosition: "center",
+        width: "1016px",
+        height: "407px"
       },
       imageLogoUser: {
         backgroundImage: "url(img/newImage/Profile_Picture.png)"
