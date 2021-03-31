@@ -1,7 +1,7 @@
 <template>
   <div class="card-body" :style="nav2Styles">
     <div class="container">
-      <br /><br />
+      <br />
       <!-- menu-list1 -->
       <div class="row justify-content-md-center" :style="pdMenuList1">
         <div class="col-sm">
@@ -43,19 +43,18 @@
       </div>
 
       <!-- main-price -->
-      <div :style="imageCardBG" class="container">
+      <div class="container" :style="imageCardBG" >
         <div class="container">
           <div class="row justify-content-between">
             <div class="col-sm-8">
               <h1 class="kanitFonts1">รายการเครดิต</h1>
               <h1 class="kanitFonts3">100,000.00 ฿</h1>
             </div>
-            <div class="col-sm-3">
+            <div class="col-sm-4">
               <a class="navbar-brand" href="#/admin/register">
                 <img
                   class="img-responsive center-block d-block mx-auto"
                   src="img/newImage/BT_Gotoplay.png"
-                  :style="openGameImage"
                 />
               </a>
             </div>
@@ -149,26 +148,17 @@ export default {
       },
       nav2Styles: {
         backgroundColor: "black",
-        height: "100%"
+        height: "90%"
       },
       imageLogoUser: {
         backgroundImage: "url(img/newImage/Profile_Picture.png)"
-      },
-      inputViewUser: {
-        width: "90%",
-        height: "45%",
-        marginTop: "25px",
-        backgroundColor: "#383838",
-        borderRadius: "4px",
-        color: "white"
       },
       imageCardBG: {
         backgroundImage: "url(img/newImage/BG_Detail01.png)",
         marginTop: "5%",
         marginBottom: "5%",
-        backgroundSize: "contain",
+        backgroundSize: "contain no-repeat",
         // backgroundPosition: "center",
-        backgroundSize: "no-repeat",
         width: "1016px",
         height: "407px"
       },
@@ -179,10 +169,6 @@ export default {
       pdMenuList2: {
         marginBottom: "25px"
       },
-      openGameImage: {
-        width: "100%",
-        marginTop: "5%"
-      }
     };
   }
 };

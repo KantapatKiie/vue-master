@@ -2,33 +2,23 @@
   <div class="container" :style="backgrondLayout">
     <!-- <side-bar>
       <mobile-menu slot="content"></mobile-menu>
-      <sidebar-link to="/admin/user">
+      <sidebar-link to="/admin/account">
         <i class="nc-icon nc-circle-09"></i>
         <p>User Profile</p>
       </sidebar-link>
-      <sidebar-link to="/admin/typography">
-        <i class="nc-icon nc-paper-2"></i>
-        <p>Typography</p>
-      </sidebar-link>
-      <sidebar-link to="/admin/icons">
-        <i class="nc-icon nc-atom"></i>
-        <p>Icons</p>
-      </sidebar-link>
-
       <template slot="bottom-links">
         <sidebar-link class="active"
-                      to="/admin/notifications">
+                      to="/admin/register">
          <i class="nc-icon nc-bell-55"></i>
           <p>Notifications</p>
         </sidebar-link>
       </template>
     </side-bar> -->
     <div class="row justify-content-center">
-      <div class="col-sm-10">
+      <div class="col-sm-10" :style="backgrondBody">
         <top-navbar></top-navbar>
         <dashboard-content @click="toggleSidebar"> </dashboard-content>
         <content-footer></content-footer>
-        <!-- <mobile-menu></mobile-menu> -->
       </div>
     </div>
   </div>
@@ -50,8 +40,11 @@ export default {
   data() {
     return {
       backgrondLayout: {
-        backgroundColor: "white",
-        height: "100%"
+        height: "100%",
+        width: "100%"
+      },
+      backgrondBody: {
+        width: "1125px"
       }
     };
   },

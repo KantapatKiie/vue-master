@@ -9,7 +9,9 @@
 export default {};
 </script>
 <style lang="scss">
+
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500&display=swap');
+
 .vue-notifyjs.notifications {
   .list-move {
     transition: transform 0.3s, opacity 0.4s;

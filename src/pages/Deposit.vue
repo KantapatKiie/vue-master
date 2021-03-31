@@ -3,13 +3,14 @@
     <div class="container-fluid">
       <br />
       <div class="col-sm-12 text-center">
-        <h2 slot="header" class="card-title kanitFonts3" :style="textColerHeader">
+        <h1 class="card-title kanitFonts3" :style="textColerHeader">
           ฝากเงินอัตโนมัติ
-        </h2>
+        </h1>
       </div>
       <br />
-      <div :style="imageBackgroundMain">
-        <div class="col-sm-12">
+      <div class="container" :style="imageBackgroundMain">
+        <br />
+        <div class="col-sm-12 text-center">
           <input
             type="text"
             id="userId"
@@ -19,6 +20,8 @@
             :style="inputBankText"
             v-model="bank.bankName"
           />
+        </div>
+        <div class="col-sm-12 text-center">
           <input
             type="text"
             id="userId"
@@ -28,10 +31,11 @@
             :style="inputBankText"
             v-model="bank.bankNumber"
           />
-          <h4 :style="labelMemoText" class="kanitFonts1">
-            *ควรใช้บัญชีข้างบนในการฝากเงินเท่านั้น
-          </h4>
         </div>
+        <h4 class="kanitFonts2" :style="labelMemoText">
+          *ควรใช้บัญชีข้างบนในการฝากเงินเท่านั้น
+        </h4>
+        <br />
         <div class="row justify-content-md-center">
           <div class="col-sm-4">
             <img
@@ -100,33 +104,26 @@ export default {
       },
       nav2Styles: {
         backgroundColor: "black",
-        height: "100%"
+        height: "90%"
       },
       imageLogoUser: {
         backgroundImage: "url(img/newImage/Profile_Picture.png)"
       },
-      inputViewUser: {
-        width: "90%",
-        height: "45%",
-        marginTop: "25px",
-        backgroundColor: "#383838",
-        borderRadius: "4px",
-        color: "white"
-      },
       inputBankText: {
         width: "90%",
-        height: "50px",
+        height: "70px",
         margin: "25px",
         backgroundColor: "#212121",
         borderRadius: "4px",
         color: "white",
         fontSize: "25px",
-        fontFamily: "kanitFonts1"
+        fontFamily: "kanitFonts"
       },
       labelMemoText: {
         color: "red",
         fontSize: "20px",
-        textAlign: "center"
+        textAlign: "center",
+        fontSize: "25px"
       },
       textColerHeader: {
         color: "#ffd373"
@@ -134,10 +131,10 @@ export default {
       imageBackgroundMain: {
         backgroundImage: "url(img/newImage/backgroungImage.png)",
         width: "100%",
-        height: "700px",
-        // backgroundPosition: "center",
+        height: "900px",
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat"
+        // backgroundPosition: "center",
       },
       imageDeposit: {
         width: "100%"

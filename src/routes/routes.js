@@ -5,12 +5,9 @@ import DashboardLayout from "../layout/DashboardLayout.vue";
 import Login from "src/pages/Login.vue";
 import Register from "src/pages/Register.vue";
 import Account from "src/pages/Account.vue";
-import ConfirmRegister from "src/pages/ConfirmRegister.vue";
+import RegisterConfirm from "src/pages/RegisterConfirm.vue";
 import Deposit from "src/pages/Deposit.vue";
 import Withdraw from "src/pages/Withdraw.vue";
-
-import Typography from "src/pages/Typography.vue";
-import Notifications from "src/pages/Notifications.vue";
 
 import NotFound from "../pages/NotFoundPage.vue";
 
@@ -38,7 +35,7 @@ const routes = [
       {
         path: "confirm-register",
         name: "Confirm Register",
-        component: ConfirmRegister
+        component: RegisterConfirm
       },
       {
         path: "account",
@@ -54,16 +51,6 @@ const routes = [
         path: "withdraw-money",
         name: "Withdraw Money",
         component: Withdraw
-      },
-      {
-        path: "typography",
-        name: "Typography",
-        component: Typography
-      },
-      {
-        path: "notifications",
-        name: "Notifications",
-        component: Notifications
       },
     ]
   },
