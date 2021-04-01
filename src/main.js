@@ -16,6 +16,7 @@ Vue.use(LightBootstrap);
 
 // configure router
 const router = new VueRouter({
+  el: "#app",
   routes, // short for routes: routes
   linkActiveClass: "nav-item active",
   scrollBehavior: to => {

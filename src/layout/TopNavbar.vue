@@ -136,7 +136,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .textSlide {
   margin: 0 auto;
   white-space: nowrap;

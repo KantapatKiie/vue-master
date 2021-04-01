@@ -36,13 +36,14 @@
 </template>
 <script>
 export default {
+  name: "contcontent-footerent",
   data() {
     return {
       backgrondFooter: {
         backgroundImage: "url(img/newImage/BG_Menubar.jpg)",
         backgroundSize: "contain",
         backgroundSize: "no-repeat",
-        width: "100%",
+        width: "100%"
       },
       menuList: {
         color: "#828282"
@@ -51,4 +52,4 @@ export default {
   }
 };
 </script>
-<style></style>
+<style lang="scss" scoped></style>

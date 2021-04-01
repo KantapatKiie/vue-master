@@ -281,7 +281,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .custom-select {
   position: relative;
   height: 40px;

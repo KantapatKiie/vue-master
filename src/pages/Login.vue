@@ -117,7 +117,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 // .imageLogoUserClass {
 //   height: 120px;
 //   width: 120px;
