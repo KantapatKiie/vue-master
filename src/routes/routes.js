@@ -14,6 +14,7 @@ import RecommendFriend from "src/pages/RecommendFriend.vue";
 import RecommendFriendIncome from "src/pages/RecommendFriendIncome.vue";
 import Payback from "src/pages/Payback.vue";
 import Other from "src/pages/Other.vue";
+import ForgotPassword from "src/pages/ForgotPassword.vue";
 
 import NotFound from "../pages/NotFoundPage.vue";
 
@@ -92,6 +93,12 @@ const routes = [
         path: "other-view",
         name: "Other",
         component: Other
+      }
+      ,
+      {
+        path: "forgot-password",
+        name: "Forgot Password",
+        component: ForgotPassword
       }
     ]
   },

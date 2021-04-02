@@ -183,7 +183,7 @@
           <br /><br />
           <br /><br />
           <div class="text-center">
-            <a class="navbar-brand" href="#/admin/register-confirm">
+            <a class="navbar-brand" href="#/admin/confirm-register">
               <img
                 @click.prevent="register"
                 class="img-responsive"

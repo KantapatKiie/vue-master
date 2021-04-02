@@ -44,7 +44,7 @@
             <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
             <div class="row justify-content-md-center">
               <li class="nav-item">
-                <a class="navbar-brand" href="#/admin/register">
+                <a class="navbar-brand" href="#/admin/login">
                   <img
                     class="avatar border-gray"
                     src="img/newImage/logout.png"
