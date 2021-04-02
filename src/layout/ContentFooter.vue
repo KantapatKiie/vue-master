@@ -19,13 +19,13 @@
           src="img/newImage/BT_Withdraw.png"
           alt="..."
       /></a>
-      <a class="navbar-brand" href="#/admin/register" :style="menuList"
+      <a class="navbar-brand" href="#/admin/history-view" :style="menuList"
         ><img
           class="avatar border-gray"
           src="img/newImage/BT_History.png"
           alt="..."
       /></a>
-      <a class="navbar-brand" href="#/admin/confirm-register" :style="menuList"
+      <a class="navbar-brand" href="#/admin/contact" :style="menuList"
         ><img
           class="avatar border-gray"
           src="img/newImage/BT_Contact.png"

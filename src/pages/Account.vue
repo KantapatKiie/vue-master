@@ -5,7 +5,7 @@
       <!-- menu-list1 -->
       <div class="row justify-content-md-center" :style="pdMenuList1">
         <div class="col-sm">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/deposit-money">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_01.png"
@@ -14,7 +14,7 @@
           </a>
         </div>
         <div class="col-sm">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/withdraw-money">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_02.png"
@@ -23,7 +23,7 @@
           </a>
         </div>
         <div class="col-sm">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/promotion">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_03.png"
@@ -32,7 +32,7 @@
           </a>
         </div>
         <div class="col-sm">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/payback-money">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_04.png"
@@ -43,20 +43,12 @@
       </div>
 
       <!-- main-price -->
-      <div class="container" :style="imageCardBG" >
+      <div class="container" :style="imageCardBG">
         <div class="container">
           <div class="row justify-content-between">
-            <div class="col-sm-8">
+            <div class="col-sm-12">
               <h1 class="kanitFonts1">รายการเครดิต</h1>
               <h1 class="kanitFonts3">100,000.00 ฿</h1>
-            </div>
-            <div class="col-sm-4">
-              <a class="navbar-brand" href="#/admin/register">
-                <img
-                  class="img-responsive center-block d-block mx-auto"
-                  src="img/newImage/BT_Gotoplay.png"
-                />
-              </a>
             </div>
           </div>
           <br /><br /><br />
@@ -73,7 +65,7 @@
       <br />
       <div class="row justify-content-md-center" :style="pdMenuList2">
         <div class="col-sm-4 ">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/recommend-friend">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_05.png"
@@ -82,7 +74,7 @@
           </a>
         </div>
         <div class="col-sm-4">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/recommend-friend-income">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_06.png"
@@ -91,7 +83,7 @@
           </a>
         </div>
         <div class="col-sm-4">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/history-view">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_07.png"
@@ -102,7 +94,7 @@
       </div>
       <div class="row justify-content-md-center" :style="pdMenuList2">
         <div class="col-sm-4">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_08.png"
@@ -111,7 +103,7 @@
           </a>
         </div>
         <div class="col-sm-4">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_09.png"
@@ -120,11 +112,23 @@
           </a>
         </div>
         <div class="col-sm-4">
-          <a class="navbar-brand" href="#/admin/register">
+          <a class="navbar-brand" href="#/admin/other-view">
             <img
               class="img-responsive center-block d-block mx-auto"
               src="img/newImage/icon_010.png"
               alt="..."
+            />
+          </a>
+        </div>
+      </div>
+      <br /><br />
+      <!-- open games -->
+      <div class="row justify-content-center">
+        <div class="col-sm-12">
+          <a class="navbar-brand" href="#">
+            <img
+              class="img-responsive center-block d-block mx-auto"
+              src="img/newImage/BT_Gotoplay1.png"
             />
           </a>
         </div>
@@ -148,7 +152,7 @@ export default {
       },
       nav2Styles: {
         backgroundColor: "black",
-        height: "90%"
+        height: "85%"
       },
       imageLogoUser: {
         backgroundImage: "url(img/newImage/Profile_Picture.png)"
@@ -168,7 +172,7 @@ export default {
       },
       pdMenuList2: {
         marginBottom: "25px"
-      },
+      }
     };
   }
 };
