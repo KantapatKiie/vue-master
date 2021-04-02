@@ -60,7 +60,7 @@
         <br /><br />
         <div class="row justify-content-md-center">
           <div class="col-sm-4">
-            <a class="navbar-brand" href="#/admin/register">
+            <a class="navbar-brand" href="#">
               <img
                 class="avatar border-gray"
                 src="img/newImage/BT_Copy.png"
@@ -70,7 +70,7 @@
             </a>
           </div>
           <div class="col-sm-4">
-            <a class="navbar-brand" href="#/admin/register">
+            <a class="navbar-brand" href="#">
               <img
                 class="avatar border-gray"
                 src="img/newImage/BT_Check.png"
@@ -117,7 +117,6 @@ export default {
         borderRadius: "4px",
         color: "white",
         fontSize: "25px",
-        fontFamily: "kanitFonts"
       },
       labelMemoText: {
         color: "red",

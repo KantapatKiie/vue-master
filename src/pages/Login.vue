@@ -35,7 +35,7 @@
             />
           </div>
           <div :style="itemTextCenter">
-            <a class="navbar-brand" href="#/admin/register">
+            <a class="navbar-brand" href="#/admin/confirm-register">
               <img
                 class="avatar border-gray"
                 src="img/newImage/BT_GotoMenu.png"

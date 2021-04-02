@@ -44,7 +44,7 @@
             :style="inputStyle"
           />
           <div class="text-center">
-            <a class="navbar-brand" href="#/admin/register">
+            <a class="navbar-brand" href="#/admin/account">
               <img
                 class="avatar border-gray"
                 src="img/newImage/BT_GotoMenu.png"

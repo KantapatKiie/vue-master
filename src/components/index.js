@@ -20,7 +20,7 @@ let components = {
   StatsCard,
   Table,
   BaseDropdown,
-  SidebarPlugin
+  SidebarPlugin,
 };
 
 export default components;

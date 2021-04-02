@@ -31,7 +31,7 @@
             <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
             <div class="row justify-content-md-center">
               <li class="nav-item">
-                <a class="navbar-brand" href="#/admin/register">
+                <a class="navbar-brand" href="#">
                   <img
                     class="avatar border-gray"
                     src="img/newImage/BT_PlayGame.png"
@@ -72,6 +72,8 @@
           <input
             type="text"
             id="userId"
+            class="kanitFonts2"
+            disabled
             v-model="user.userId"
             :style="inputViewUser"
           />
@@ -108,8 +110,7 @@ export default {
         backgroundColor: "#383838",
         borderRadius: "5px",
         color: "white",
-        fontSize: "28px",
-        fontFamily: "kanitFonts1"
+        fontSize: "32px",
       },
       textSlideHeader: {
         fontSize: "32px",

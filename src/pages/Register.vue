@@ -17,9 +17,9 @@
             <div class="row">
               <div class="col-sm-12">
                 <div :style="inputGroupStyle">
-                  <div class="custom-select">
+                  <div class="custom-select kanitFonts1">
                     <select
-                      class="custom-select"
+                      class="custom-select kanitFonts1"
                       v-model="user.accbank"
                       :style="selectTextColor"
                     >
@@ -46,7 +46,7 @@
                   <input
                     type="search"
                     class="kanitFonts2"
-                    placeholder="เลขที่บัญชี.."
+                    placeholder=" เลขที่บัญชี.."
                     maxlength="16"
                     v-model="user.banknumber"
                     :style="inputBlackBoxStyle"
@@ -68,7 +68,7 @@
                   <input
                     type="search"
                     class="kanitFonts2"
-                    placeholder="ชื่อ - นามสกุล (ชื่อบัญชีธนาคาร)"
+                    placeholder=" ชื่อ - นามสกุล (ชื่อบัญชีธนาคาร)"
                     v-model="user.fullname"
                     :style="inputBlackBoxStyle"
                   />
@@ -89,7 +89,7 @@
                   <input
                     type="search"
                     class="kanitFonts2"
-                    placeholder="เบอร์โทรศัพท์"
+                    placeholder=" เบอร์โทรศัพท์"
                     maxlength="10"
                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     v-model="user.telephone"
@@ -113,7 +113,7 @@
                   <input
                     type="search"
                     class="kanitFonts2"
-                    placeholder="รหัสเข้าเล่น (ล็อกอินเข้าสู่ระบบ)"
+                    placeholder=" รหัสเข้าเล่น (ล็อกอินเข้าสู่ระบบ)"
                     v-model="user.password"
                     :style="inputBlackBoxStyle"
                   />
@@ -131,9 +131,9 @@
             <div class="row">
               <div class="col-sm-12">
                 <div :style="inputGroupStyle">
-                  <div class="custom-select">
+                  <div class="custom-select kanitFonts1">
                     <select
-                      class="custom-select"
+                      class="custom-select kanitFonts1"
                       v-model="user.knowus"
                       :style="selectTextColor"
                     >
@@ -157,9 +157,9 @@
             <div class="row">
               <div class="col-sm-12">
                 <div :style="inputGroupStyle">
-                  <div class="custom-select">
+                  <div class="custom-select kanitFonts1">
                     <select
-                      class="custom-select"
+                      class="custom-select kanitFonts1"
                       v-model="user.promotion"
                       :style="selectTextColor"
                     >
@@ -181,8 +181,9 @@
 
           <!-- button register -->
           <br /><br />
+          <br /><br />
           <div class="text-center">
-            <a class="navbar-brand" href="#/admin/register">
+            <a class="navbar-brand" href="#/admin/register-confirm">
               <img
                 @click.prevent="register"
                 class="img-responsive"
@@ -193,7 +194,7 @@
           </div>
           <br />
           <div class="row text-center">
-            <label class="control-label" :style="textMemo">
+            <label class="control-label kanitFonts1" :style="textMemo">
               <span :style="colorSpan">*</span>
               กรุณากรอกข้อมูลให้ครบทุกช่อง
             </label>
@@ -237,24 +238,23 @@ export default {
         color: "#ffd373"
       },
       imgRegister: {
-        width: "150px"
+        width: "250px"
       },
       colorSpan: {
         color: "red"
       },
       textMemo: {
-        color: "#828282"
+        color: "#828282",
+        fontSize:"20px"
       },
       //form-StyleInput & StyleSelect
       boxPDStyles: {
         marginTop: "25px",
-        fontFamily: "kanitFonts1"
       },
       inputGroupStyle: {
         backgroundColor: "black",
         width: "100%",
         height: "40px",
-        fontFamily: "kanitFonts2"
       },
       inputBlackBoxStyle: {
         backgroundColor: "black",
@@ -262,7 +262,6 @@ export default {
         color: "white",
         width: "100%",
         height: "40px",
-        fontFamily: "kanitFonts2",
         fontSize: "20px"
       },
       listInputStyle: {
@@ -281,7 +280,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .custom-select {
   position: relative;
   height: 40px;
@@ -289,7 +288,6 @@ export default {
   color: white;
   display: inline-block;
   appearance: none;
-  font-family: "kanitFonts2";
 }
 
 .custom-select select {
@@ -301,7 +299,6 @@ export default {
   text-transform: uppercase;
   outline: none;
   appearance: none;
-  font-family: "kanitFonts2";
 }
 .custom-select::after {
   content: "";
@@ -316,6 +313,5 @@ export default {
   pointer-events: none;
   appearance: none;
   color: white;
-  font-family: "kanitFonts2";
 }
 </style>
