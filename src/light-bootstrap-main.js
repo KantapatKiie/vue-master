@@ -4,9 +4,9 @@ import GlobalDirectives from "./globalDirectives";
 import SideBar from "./components/SidebarPlugin";
 
 // Bootstrap
-// import { BootstrapVue } from 'bootstrap-vue'
-// import 'bootstrap/dist/css/bootstrap.css'
-// import 'bootstrap-vue/dist/bootstrap-vue.css'
+import { BootstrapVue } from 'bootstrap-vue'
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 
 // asset imports
 import "bootstrap/dist/css/bootstrap.css";
@@ -20,6 +20,6 @@ export default {
     Vue.use(SideBar);
     Vue.use(VTooltip);
 
-    // Vue.use(BootstrapVue)
+    Vue.use(BootstrapVue)
   }
 };

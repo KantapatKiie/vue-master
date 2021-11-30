@@ -1,60 +1,46 @@
 <template>
   <div :style="backgrondTopNav">
     <br />
-    <nav
-      class="navbar navbar-expand-lg"
-      :data-color="red"
-      :style="backgrondTopNav"
-    >
-      <div class="container-fluid">
-        <div class="col-sm-8">
-          <div class="textSlide">
-            <span class="kanitFonts2" :style="textSlideHeader"
-              >#ข้อความ #โปรโมชั่น #ส่วนลด #ดีล</span
-            >
+    <nav class="navbar-expand-lg">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm">
+            <div class="textSlide">
+              <span class="kanitFonts2">#ข้อความ #โปรโมชั่น #ส่วนลด #ดีล</span>
+            </div>
           </div>
-        </div>
-        <div class="justify-content-end">
-          <ul class="navbar-nav ml-auto">
-            <div class="row justify-content-md-center">
-              <li class="nav-item">
+          <div class="col-sm-4">
+            <div class="row">
+              <div class="col-sm" />
+              <div class="col-sm">
                 <a class="navbar-brand" href="#/admin/account">
                   <img
-                    class="avatar border-gray"
+                    class="avatar border-gray navIconRight"
                     src="img/newImage/home.png"
                     alt="..."
-                    :style="navIconRight"
                   />
                 </a>
-              </li>
-            </div>
-            <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            <div class="row justify-content-md-center">
-              <li class="nav-item">
+              </div>
+              <div class="col-sm">
                 <a class="navbar-brand" href="#">
                   <img
-                    class="avatar border-gray"
+                    class="avatar border-gray navIconRight"
                     src="img/newImage/BT_PlayGame.png"
                     alt="..."
-                    :style="navIconRight"
                   />
                 </a>
-              </li>
-            </div>
-            <li class="nav-item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-            <div class="row justify-content-md-center">
-              <li class="nav-item">
+              </div>
+              <div class="col-sm">
                 <a class="navbar-brand" href="#/admin/login">
                   <img
-                    class="avatar border-gray"
+                    class="avatar border-gray navIconRight"
                     src="img/newImage/logout.png"
                     alt="..."
-                    :style="navIconRight"
                   />
                 </a>
-              </li>
+              </div>
             </div>
-          </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -88,20 +74,17 @@ export default {
     routeName() {
       const { name } = this.$route;
       return this.capitalizeFirstLetter(name);
-    }
+    },
   },
   data() {
     return {
       activeNotifications: false,
       user: {
-        userId: "  VIP  :  0908566930"
+        userId: "  VIP  :  0908566930",
       },
       backgrondTopNav: {
         backgroundColor: "black",
-        width: "100%"
-      },
-      navIconRight: {
-        width: "80px"
+        width: "100%",
       },
       inputViewUser: {
         width: "100%",
@@ -110,12 +93,8 @@ export default {
         backgroundColor: "#383838",
         borderRadius: "5px",
         color: "white",
-        fontSize: "32px",
+        fontSize: "28px",
       },
-      textSlideHeader: {
-        fontSize: "32px",
-        color: "#999999"
-      }
     };
   },
   methods: {
@@ -133,26 +112,39 @@ export default {
     },
     hideSidebar() {
       this.$sidebar.displaySidebar(false);
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 .textSlide {
+  font-size: 32px;
+  color: #999999;
   margin: 0 auto;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
+  @media (max-width: 420px) {
+    font-size: 18px;
+  }
 }
 
 .textSlide span {
   display: inline-block;
-  padding-left: 100%;
-  animation: textSlide 5s linear infinite;
+  padding-left: 50%;
+  animation: textSlide 4s linear infinite;
 }
 
 .textSlide2 span {
-  animation-delay: 2.5s;
+  animation-delay: 2s;
+}
+
+.navIconRight {
+  width: 100%;
+
+  @media (max-width: 420px) {
+    width: 12%;
+  }
 }
 
 @keyframes textSlide {
