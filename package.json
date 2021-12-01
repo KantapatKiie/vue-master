@@ -2,8 +2,8 @@
   "name": "vue-web-master",
   "version": "1.0.0",
   "private": true,
-  "description": "Vue Master",
-  "author": "Kantapat Dev",
+  "description": "Autoeasy168",
+  "author": "MJ Dev",
   "scripts": {
     "start": "vue-cli-service serve --open",
     "build": "vue-cli-service build",
