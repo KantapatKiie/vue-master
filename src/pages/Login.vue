@@ -1,86 +1,84 @@
 <template>
   <div class="card-body nav2Styles">
-    <div class="container-fluid">
-      <div class="col-sm-12 text-center">
-        <h1 class="card-title kanitFonts3 textColerHeader">ยินดีต้อนรับ</h1>
-      </div>
-      <div class="container imageCard">
-        <div class="wrapper-full-page marginToTop">
-          <div class="form-group">
-            <div class="col-sm-6">
-              <label class="kanitFonts2 labelStyleInput">ชื่อเข้าระบบ</label>
-            </div>
-            <input
-              type="search"
-              class="form-control kanitFonts1 inputStyle"
-              placeholder="User Id"
-            />
+    <div class="col-sm-12 text-center">
+      <h1 class="card-title kanitFonts3 textColerHeader">ยินดีต้อนรับ</h1>
+    </div>
+    <div class="container imageCard">
+      <div class="wrapper-full-page marginToTop">
+        <div class="form-group">
+          <div class="col-sm-6">
+            <label class="kanitFonts2 labelStyleInput">ชื่อเข้าระบบ</label>
           </div>
-          <div class="form-group">
-            <div class="col-sm-6">
-              <label class="kanitFonts2 labelStyleInput">รหัสผ่าน</label>
-            </div>
-            <input
-              type="search"
-              class="form-control kanitFonts1 inputStyle"
-              placeholder="Password"
-            />
-          </div>
-          <div class="itemTextCenter">
-            <a class="navbar-brand" href="#/admin/account">
-              <img
-                class="img-responsive imageGotoMainmenu"
-                src="img/newImage/BT_Login.png"
-                alt="..."
-              />
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row justify-content-md-center">
-        <div class="col-sm-12 text-center">
-          <a class="navbar-brand" href="#/admin/forgot-password">
-            <label class="card-title kanitFonts1 textFooterBoxLogin">
-              ลืมรหัสผ่าน
-            </label>
-          </a>
-          <a class="navbar-brand" href="#">
-            <label class="card-title kanitFonts1 textFooterBoxLogin">
-              / &nbsp;&nbsp;&nbsp;&nbsp;ติดต่อเจ้าหน้าที่
-            </label>
-          </a>
-        </div>
-      </div>
-      <br /><br />
-
-      <div class="row justify-content-md-center">
-        <div class="row">
-          <div class="col-4">
-            <hr class="new5" />
-          </div>
-          <div class="col-4 text-center">
-            <label class="card-title kanitFonts1 textFooterNoAccount">
-              ยังไม่มีบัญชี
-            </label>
-          </div>
-          <div class="col-4">
-            <hr class="new5" />
-          </div>
-        </div>
-      </div>
-      <br /><br />
-
-      <div class="text-center">
-        <a class="navbar-brand" href="#/admin/register">
-          <img
-            class="img-responsive imgRegister"
-            src="img/newImage/BT_Register.png"
+          <input
+            type="search"
+            class="form-control kanitFonts1 inputStyle"
+            placeholder="User Id"
           />
+        </div>
+        <div class="form-group">
+          <div class="col-sm-6">
+            <label class="kanitFonts2 labelStyleInput">รหัสผ่าน</label>
+          </div>
+          <input
+            type="search"
+            class="form-control kanitFonts1 inputStyle"
+            placeholder="Password"
+          />
+        </div>
+        <div class="itemTextCenter">
+          <a class="navbar-brand" href="#/admin/account">
+            <img
+              class="img-responsive imageGotoMainmenu"
+              src="img/newImage/BT_Login.png"
+              alt="..."
+            />
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+      <div class="col-12 text-center">
+        <a class="navbar-brand" href="#/admin/forgot-password">
+          <label class="card-title kanitFonts1 textFooterBoxLogin">
+            ลืมรหัสผ่าน
+          </label>
+        </a>
+        <a class="navbar-brand" href="#">
+          <label class="card-title kanitFonts1 textFooterBoxLogin">
+            / ติดต่อเจ้าหน้าที่
+          </label>
         </a>
       </div>
-      <br />
     </div>
+    <br /><br />
+
+    <div class="row justify-content-md-center">
+      <div class="row">
+        <div class="col-4">
+          <hr class="new5" />
+        </div>
+        <div class="col-4 text-center">
+          <label class="card-title kanitFonts1 textFooterNoAccount">
+            ยังไม่มีบัญชี
+          </label>
+        </div>
+        <div class="col-4">
+          <hr class="new5" />
+        </div>
+      </div>
+    </div>
+    <br /><br />
+
+    <div class="text-center">
+      <a class="navbar-brand" href="#/admin/register">
+        <img
+          class="img-responsive imgRegister"
+          src="img/newImage/BT_Register.png"
+        />
+      </a>
+    </div>
+    <br />
   </div>
 </template>
 <script>

@@ -1,92 +1,87 @@
 <template>
   <div class="card-body nav2Styles">
-    <div class="container-fluid">
-      <div class="col-sm-12 text-center">
-        <h1 class="card-title kanitFonts3 textColerHeader">ถอนเงิน</h1>
-      </div>
+    <div class="col-sm-12 text-center">
+      <h1 class="card-title kanitFonts3 textColerHeader">ถอนเงิน</h1>
+    </div>
 
-      <div class="container imageCardBG1">
-        <div class="row justify-content-between">
-          <div class="col-sm-12">
-            <h1 class="kanitFonts1 fontH1">เครดิตคงเหลือ</h1>
-            <h1 class="kanitFonts3 fontH2">0.00 ฿</h1>
-          </div>
+    <div class="container imageCardBG1">
+      <div class="row justify-content-between">
+        <div class="col-sm-12">
+          <h1 class="kanitFonts1 fontH1">เครดิตคงเหลือ</h1>
+          <h1 class="kanitFonts3 fontH2">0.00 ฿</h1>
         </div>
-        <div class="row justify-content-start">
-          <h3 class="kanitFonts1 textCreditbox">
-            *เครดิตของคุณไม่เพียงพอสำหรับการถอนเงิน
-          </h3>
+      </div>
+      <div class="row justify-content-start">
+        <h3 class="kanitFonts1 textCreditbox">
+          *เครดิตของคุณไม่เพียงพอสำหรับการถอนเงิน
+        </h3>
+      </div>
+    </div>
+    <br />
+
+    <div class="container imageCardBG2">
+      <div class="row justify-content-between">
+        <div class="col-sm-12">
+          <h1 class="kanitFonts1 fontH1">จำนวนเงินที่ต้องการถอน</h1>
+          <input
+            class="kanitFonts2 inputStyle"
+            placeholder="0.00"
+            type="search"
+          />
         </div>
       </div>
       <br />
+      <div class="row justify-content-start">
+        <h3 class="kanitFonts1 textCreditbox">
+          เพื่อความรวดเร็วในการถอน แนะนำให้ใช้ธนาคารเดียวกันกับที่ฝากเงิน
+        </h3>
+      </div>
+    </div>
 
-      <div class="container imageCardBG2">
-        <div class="row justify-content-between">
-          <div class="col-sm-12">
-            <h1 class="kanitFonts1 fontH1">จำนวนเงินที่ต้องการถอน</h1>
-            <input
-              class="kanitFonts2 inputStyle"
-              placeholder="0.00"
-              type="search"
-            />
-          </div>
+    <div class="col-sm-12 text-center">
+      <h1 class="card-title kanitFonts3 textColerHeader">บัญชีรับเงิน</h1>
+    </div>
+
+    <div class="container imageBackgroundMain">
+      <br />
+      <div class="row justify-content-md-start">
+        <div class="col-sm-3">
+          <img
+            class="img-responsive imageBank"
+            src="img/newImage/SCB_Logo.jpg"
+            alt="..."
+          />
         </div>
-        <br />
-        <div class="row justify-content-start">
-          <h3 class="kanitFonts1 textCreditbox">
-            เพื่อความรวดเร็วในการถอน แนะนำให้ใช้ธนาคารเดียวกันกับที่ฝากเงิน
+        <div class="col-sm-6 text-start">
+          <h3 class="kanitFonts1 textBankHeader1">ธนาคารไทยพาณิชย์</h3>
+          <h3 class="kanitFonts2 textBankHeader2">09085666930</h3>
+          <h3 class="kanitFonts1 textBankHeader1">
+            ชื่อบัญชี : น.ส.ตัวอย่าง ตัวอย่าง
           </h3>
         </div>
-      </div>
 
-      <div class="col-sm-12 text-center">
-        <h1 class="card-title kanitFonts3 textColerHeader">บัญชีรับเงิน</h1>
+        <div class="col-sm-3">
+          <select class="select kanitFonts3 dateSortTable" v-model="bank.days">
+            <option disabled value="0">เลือกบัญชี</option>
+            <option value="1">ภายใน 3 วัน</option>
+            <option value="2">ภายใน 7 วัน</option>
+          </select>
+        </div>
       </div>
+      <br /><br />
 
-      <div class="container imageBackgroundMain">
-        <br />
-        <div class="row justify-content-md-start">
-          <div class="col-sm-3">
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12 text-center">
+          <a class="navbar-brand" href="#">
             <img
-              class="img-responsive imageBank"
-              src="img/newImage/SCB_Logo.jpg"
+              class="img-responsive imgConfirm"
+              src="img/newImage/BT_CF.png"
               alt="..."
             />
-          </div>
-          <div class="col-sm-6 text-start">
-            <h3 class="kanitFonts1 textBankHeader1">ธนาคารไทยพาณิชย์</h3>
-            <h3 class="kanitFonts2 textBankHeader2">09085666930</h3>
-            <h3 class="kanitFonts1 textBankHeader1">
-              ชื่อบัญชี : น.ส.ตัวอย่าง ตัวอย่าง
-            </h3>
-          </div>
-
-          <div class="col-sm-3">
-            <select
-              class="select kanitFonts3 dateSortTable"
-              v-model="bank.days"
-            >
-              <option disabled value="0">เลือกบัญชี</option>
-              <option value="1">ภายใน 3 วัน</option>
-              <option value="2">ภายใน 7 วัน</option>
-            </select>
-          </div>
+          </a>
         </div>
-        <br /><br />
-
-        <div class="row justify-content-md-center">
-          <div class="col-sm-12 text-center">
-            <a class="navbar-brand" href="#">
-              <img
-                class="img-responsive imgConfirm"
-                src="img/newImage/BT_CF.png"
-                alt="..."
-              />
-            </a>
-          </div>
-        </div>
-        <br />
       </div>
+      <br />
     </div>
     <br />
   </div>
@@ -139,7 +134,7 @@ export default {
   font-size: 32px;
 
   @media (max-width: 420px) {
-    font-size: 20px;
+    font-size: 24px;
   }
 }
 .textCreditbox {

@@ -1,6 +1,5 @@
 <template>
   <div class="card-body nav2Styles">
-    <div class="container">
       <!-- menu-list1 -->
       <div class="row justify-content-md-center">
         <div class="col-3">
@@ -135,7 +134,6 @@
         </div>
       </div>
       <br />
-    </div>
   </div>
 </template>
 <script>
