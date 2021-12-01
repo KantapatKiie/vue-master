@@ -7,6 +7,9 @@ function resolveSrc(_path) {
 
 module.exports = {
   lintOnSave: false,
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/vue-master/'
+    : '/',
   configureWebpack: {
     // Set up all the aliases we use in our app.
     resolve: {

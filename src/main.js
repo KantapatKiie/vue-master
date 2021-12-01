@@ -14,6 +14,8 @@ import "./registerServiceWorker";
 Vue.use(VueRouter);
 Vue.use(LightBootstrap);
 
+console.log(process.env.NODE_ENV)
+
 // configure router
 const router = new VueRouter({
   el: "#app",
