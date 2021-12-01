@@ -169,10 +169,14 @@
           <div class="text-center">
             <a class="navbar-brand" href="#/admin/confirm-register">
               <img
-                @click.prevent="register"
                 class="img-responsive imgRegister"
                 src="img/newImage/register-01.png"
               />
+              <!-- <img
+                @click.prevent="register"
+                class="img-responsive imgRegister"
+                src="img/newImage/register-01.png"
+              /> -->
             </a>
           </div>
           <br />
@@ -184,6 +188,7 @@
           </div>
         </div>
       </form>
+
     </div>
   </div>
 </template>

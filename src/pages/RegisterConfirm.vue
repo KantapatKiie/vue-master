@@ -1,61 +1,61 @@
 <template>
   <div class="card-body nav2Styles">
     <div class="container-fluid">
-      <div :style="itemTextCenter">
-        <h1 slot="header" class="card-title kanitFonts3" :style="textCenter1">
+      <div class="itemTextCenter">
+        <h1 slot="header" class="card-title kanitFonts3 textCenter1">
           การสมัครของคุณสำเร็จ
         </h1>
         <div class="col-lg-12">
-          <label class="kanitFonts2" :style="textCenter2">
+          <label class="kanitFonts2 textCenter2">
             ขอบคุณสำหรับการสมัครสมาชิก
           </label>
         </div>
         <div class="col-lg-12">
-          <label class="card-title kanitFonts2" :style="textCenter2">
+          <label class="card-title kanitFonts2 textCenter2">
             คุณสามารถใช้ชื่อผู้ใช้
           </label>
         </div>
 
         <div class="col-lg-12">
-          <label class="card-title kanitFonts2" :style="textCenter2">
+          <label class="card-title kanitFonts2 textCenter2">
             และรหัสผ่านนี้ เพื่อทำการเข้าสู่ระบบ
           </label>
         </div>
       </div>
-      <br /><br />
-      <div class="imageClass" :style="imageCard">
-        <div class="container-fluid" :style="marginToTop">
+      <div class="imageClass imageCard">
+        <div class="container-fluid">
           <div class="col-sm-6">
-            <h1 class="kanitFonts3" :style="labelStyleInput">ชื่อเข้าระบบ</h1>
+            <h1 class="kanitFonts3 labelStyleInput marginToTop">
+              ชื่อเข้าระบบ
+            </h1>
           </div>
           <input
             type="email"
-            class="form-control kanitFonts2"
+            class="form-control kanitFonts2 inputStyle"
             placeholder="User Id"
-            :style="inputStyle"
           />
           <div class="col-sm-6">
-            <h2 class="kanitFonts3" :style="labelStyleInput">รหัสผ่าน</h2>
+            <h2 class="kanitFonts3 labelStyleInput">รหัสผ่าน</h2>
           </div>
           <input
             type="email"
-            class="form-control kanitFonts2"
+            class="form-control kanitFonts2 inputStyle"
             placeholder="Password"
-            :style="inputStyle"
           />
           <div class="text-center">
             <a class="navbar-brand" href="#/admin/account">
               <img
-                class="avatar border-gray"
+                class="img-responsive imageGotoMainmenu"
                 src="img/newImage/BT_GotoMenu.png"
                 alt="Go to main page"
-                :style="imageGotoMainmenu"
               />
             </a>
           </div>
         </div>
       </div>
     </div>
+    <br />
+    <br />
   </div>
 </template>
 <script>
@@ -63,65 +63,10 @@ export default {
   data() {
     return {
       user: {
-        userId: "  VIP  :  0908566930"
+        userId: "  VIP  :  0908566930",
       },
-      imageUser: {
-        width: "100px"
-      },
-      imageCardCenter: {
-        width: "90%"
-      },
-      inputViewUser: {
-        width: "90%",
-        height: "45%",
-        paddingTop: "15px",
-        backgroundColor: "#383838",
-        borderRadius: "4px",
-        color: "white"
-      },
-      textCenter1: {
-        textAlign: "center",
-        color: "#ffd373"
-      },
-      itemTextCenter: {
-        textAlign: "center"
-      },
-      textCenter2: {
-        textAlign: "center",
-        color: "white",
-        fontSize: "24px"
-      },
-      marginToTop: {
-        paddingTop: "5px"
-      },
-      labelStyleInput: {
-        marginLeft: "25px",
-        width: "90%",
-        fontSize: "24px"
-      },
-      inputStyle: {
-        backgroundColor: "black",
-        borderWidth: "0px",
-        margin: "25px",
-        width: "90%",
-        height: "60px",
-        color: "white"
-      },
-      imageGotoMainmenu: {
-        width: "22%"
-      },
-      imageCard: {
-        backgroundImage: "url(img/newImage/BG_Detail01.png)",
-        backgroundSize: "contain no-repeat",
-        // backgroundPosition: "center",
-        width: "1016px",
-        height: "407px"
-      },
-      imageLogoUser: {
-        backgroundImage: "url(img/newImage/Profile_Picture.png)"
-      }
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -144,5 +89,81 @@ export default {
   @media (max-width: 988px) {
     background-size: cover;
   }
+}
+
+.textCenter1 {
+  text-align: center;
+  color: #ffd373;
+  font-size: 38px;
+
+  @media (max-width: 420px) {
+    font-size: 28px;
+  }
+}
+
+.textCenter2 {
+  text-align: center;
+  color: white;
+  font-size: 24px;
+
+  @media (max-width: 420px) {
+    font-size: 16px;
+  }
+}
+
+.itemTextCenter {
+  text-align: center;
+}
+
+.marginToTop {
+  padding-top: 25px;
+}
+.labelStyleInput {
+  width: 100%;
+  font-size: 20px;
+
+  @media (max-width: 420px) {
+    font-size: 15px;
+  }
+}
+.inputStyle {
+  background-color: black;
+  border-width: 0px;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+
+  @media (max-width: 420px) {
+    background-color: black;
+    border-width: 0px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+  }
+}
+.imageGotoMainmenu {
+  width: 30%;
+  margin-top: 10px;
+
+  @media (max-width: 420px) {
+    width: 50%;
+  }
+}
+.imageCard {
+  background-image: url(/img/newImage/BG_Detail01.png);
+  background-size: contain no-repeat;
+  background-position: center;
+  width: 100%;
+  border-radius: 10px;
+
+  @media (max-width: 420px) {
+    background-size: contain no-repeat;
+    background-position: center;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+.imageLogoUser {
+  background-image: url(/img/newImage/Profile_Picture.png);
 }
 </style>

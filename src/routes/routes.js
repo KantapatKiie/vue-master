@@ -22,7 +22,7 @@ const routes = [
   {
     path: "/",
     component: DashboardLayout,
-    redirect: "/admin/account"
+    redirect: "/admin/account",
   },
   {
     path: "/admin",
@@ -32,77 +32,76 @@ const routes = [
       {
         path: "login",
         name: "Login",
-        component: Login
+        component: Login,
       },
       {
         path: "register",
         name: "Register",
-        component: Register
+        component: Register,
       },
       {
         path: "confirm-register",
         name: "Confirm Register",
-        component: RegisterConfirm
+        component: RegisterConfirm,
       },
       {
         path: "account",
         name: "Account",
-        component: Account
+        component: Account,
       },
       {
         path: "deposit-money",
         name: "Deposit Money",
-        component: Deposit
+        component: Deposit,
       },
       {
         path: "withdraw-money",
         name: "Withdraw Money",
-        component: Withdraw
+        component: Withdraw,
       },
       {
         path: "history-view",
         name: "History",
-        component: History
+        component: History,
       },
       {
         path: "contact",
         name: "Contact",
-        component: Contact
+        component: Contact,
       },
       {
         path: "promotion",
         name: "Promotion",
-        component: Promotion
+        component: Promotion,
       },
       {
         path: "recommend-friend",
         name: "Recommend Friend",
-        component: RecommendFriend
+        component: RecommendFriend,
       },
       {
         path: "recommend-friend-income",
         name: "Recommend Friend Income",
-        component: RecommendFriendIncome
+        component: RecommendFriendIncome,
       },
       {
         path: "payback-money",
         name: "Payback Money",
-        component: Payback
+        component: Payback,
       },
       {
         path: "other-view",
         name: "Other",
-        component: Other
-      }
-      ,
+        component: Other,
+      },
       {
         path: "forgot-password",
         name: "Forgot Password",
-        component: ForgotPassword
-      }
-    ]
+        component: ForgotPassword,
+      },
+    ],
   },
-  { path: "*", component: NotFound }
+  { path: "*", component: NotFound },
 ];
 
 /**
