@@ -1,11 +1,10 @@
 <template>
-  <div class="card-body" :style="nav2Styles">
-    <br />
-    <div class="container-fluid">
-      <h2 slot="header" class="card-title kanitFonts3" :style="textCenter">
+  <div class="card-body nav2Styles">
+    <div class="container-fluid text-center">
+      <h2 slot="header" class="card-title kanitFonts3 textCenter">
         ยินดีต้อนรับ
       </h2>
-      <h4 slot="header" class="card-title kanitFonts3" :style="textCenter">
+      <h4 slot="header" class="card-title kanitFonts3 textCenter">
         ข้อมูลการสมัครสมาชิกใหม่
       </h4>
     </div>
@@ -13,129 +12,118 @@
     <div class="card-body">
       <form>
         <div class="col-lg-12">
-          <div class="form-group-lg" :style="boxPDStyles">
+          <div class="form-group-lg boxPDStyles">
             <div class="row">
               <div class="col-sm-12">
-                <div :style="inputGroupStyle">
+                <div class="inputGroupStyle">
                   <div class="custom-select kanitFonts1">
                     <select
-                      class="custom-select kanitFonts1"
+                      class="custom-select kanitFonts1 selectTextColor"
                       v-model="user.accbank"
-                      :style="selectTextColor"
                     >
                       <option disabled value="1">ธนาคารที่ใช้</option>
-                      <option>A</option>
-                      <option>B</option>
-                      <option>C</option>
+                      <option value="2">Bank A</option>
+                      <option value="3">Bank B</option>
+                      <option value="4">Bank C</option>
                     </select>
                   </div>
                 </div>
               </div>
             </div>
             <img
-              class="img-responsive center-block d-block mx-auto"
+              class="img-responsive center-block d-block mx-auto listInputStyle"
               src="img/newImage/lineInput.jpg"
-              :style="listInputStyle"
             />
           </div>
 
-          <div class="form-group" :style="boxPDStyles">
+          <div class="form-group boxPDStyles">
             <div class="row">
               <div class="col-sm-12">
-                <div :style="inputGroupStyle">
+                <div class="inputGroupStyle">
                   <input
                     type="search"
-                    class="kanitFonts2"
+                    class="kanitFonts2 inputBlackBoxStyle"
                     placeholder=" เลขที่บัญชี.."
                     maxlength="16"
                     v-model="user.banknumber"
-                    :style="inputBlackBoxStyle"
                   />
                 </div>
               </div>
             </div>
             <img
-              class="img-responsive center-block d-block mx-auto"
+              class="img-responsive center-block d-block mx-auto listInputStyle"
               src="img/newImage/lineInput.jpg"
-              :style="listInputStyle"
             />
           </div>
 
-          <div class="form-group" :style="boxPDStyles">
+          <div class="form-group boxPDStyles">
             <div class="row">
               <div class="col-sm-12">
-                <div :style="inputGroupStyle">
+                <div class="inputGroupStyle">
                   <input
                     type="search"
-                    class="kanitFonts2"
+                    class="kanitFonts2 inputBlackBoxStyle"
                     placeholder=" ชื่อ - นามสกุล (ชื่อบัญชีธนาคาร)"
                     v-model="user.fullname"
-                    :style="inputBlackBoxStyle"
                   />
                 </div>
               </div>
             </div>
             <img
-              class="img-responsive center-block d-block mx-auto"
+              class="img-responsive center-block d-block mx-auto listInputStyle"
               src="img/newImage/lineInput.jpg"
-              :style="listInputStyle"
             />
           </div>
 
-          <div class="form-group" :style="boxPDStyles">
+          <div class="form-group boxPDStyles">
             <div class="row">
               <div class="col-sm-12">
-                <div :style="inputGroupStyle">
+                <div class="inputGroupStyle">
                   <input
                     type="search"
-                    class="kanitFonts2"
+                    class="kanitFonts2 inputBlackBoxStyle"
                     placeholder=" เบอร์โทรศัพท์"
                     maxlength="10"
                     pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"
                     v-model="user.telephone"
                     required
-                    :style="inputBlackBoxStyle"
                   />
                 </div>
               </div>
             </div>
             <img
-              class="img-responsive center-block d-block mx-auto"
+              class="img-responsive center-block d-block mx-auto listInputStyle"
               src="img/newImage/lineInput.jpg"
-              :style="listInputStyle"
             />
           </div>
 
-          <div class="form-group" :style="boxPDStyles">
+          <div class="form-group boxPDStyles">
             <div class="row">
               <div class="col-sm-12">
-                <div :style="inputGroupStyle">
+                <div class="inputGroupStyle">
                   <input
                     type="search"
-                    class="kanitFonts2"
+                    class="kanitFonts2 inputBlackBoxStyle"
                     placeholder=" รหัสเข้าเล่น (ล็อกอินเข้าสู่ระบบ)"
                     v-model="user.password"
-                    :style="inputBlackBoxStyle"
                   />
                 </div>
               </div>
             </div>
             <img
-              class="img-responsive center-block d-block mx-auto"
+              class="img-responsive center-block d-block mx-auto listInputStyle"
               src="img/newImage/lineInput.jpg"
-              :style="listInputStyle"
             />
           </div>
 
-          <div class="form-group-lg" :style="boxPDStyles">
+          <div class="form-group-lg boxPDStyles">
             <div class="row">
               <div class="col-sm-12">
-                <div :style="inputGroupStyle">
+                <div class="inputGroupStyle">
                   <div class="custom-select kanitFonts1">
                     <select
-                      class="custom-select kanitFonts1"
+                      class="custom-select kanitFonts1 selectTextColor"
                       v-model="user.knowus"
-                      :style="selectTextColor"
                     >
                       <option disabled value="1">รู้จักเราที่ไหน ?</option>
                       <option>A</option>
@@ -147,21 +135,19 @@
               </div>
             </div>
             <img
-              class="img-responsive center-block d-block mx-auto"
+              class="img-responsive center-block d-block mx-auto listInputStyle"
               src="img/newImage/lineInput.jpg"
-              :style="listInputStyle"
             />
           </div>
 
-          <div class="form-group-lg" :style="boxPDStyles">
+          <div class="form-group-lg boxPDStyles">
             <div class="row">
               <div class="col-sm-12">
-                <div :style="inputGroupStyle">
+                <div class="inputGroupStyle">
                   <div class="custom-select kanitFonts1">
                     <select
-                      class="custom-select kanitFonts1"
+                      class="custom-select kanitFonts1 selectTextColor"
                       v-model="user.promotion"
-                      :style="selectTextColor"
                     >
                       <option disabled value="1">โปรโมชั่น ?</option>
                       <option>A</option>
@@ -173,29 +159,26 @@
               </div>
             </div>
             <img
-              class="img-responsive center-block d-block mx-auto"
+              class="img-responsive center-block d-block mx-auto listInputStyle"
               src="img/newImage/lineInput.jpg"
-              :style="listInputStyle"
             />
           </div>
 
           <!-- button register -->
           <br /><br />
-          <br /><br />
           <div class="text-center">
             <a class="navbar-brand" href="#/admin/confirm-register">
               <img
                 @click.prevent="register"
-                class="img-responsive"
+                class="img-responsive imgRegister"
                 src="img/newImage/register-01.png"
-                :style="imgRegister"
               />
             </a>
           </div>
           <br />
           <div class="row text-center">
-            <label class="control-label kanitFonts1" :style="textMemo">
-              <span :style="colorSpan">*</span>
+            <label class="control-label kanitFonts1 textMemo">
+              <span class="colorSpan">*</span>
               กรุณากรอกข้อมูลให้ครบทุกช่อง
             </label>
           </div>
@@ -213,7 +196,7 @@ export default {
   components: {
     LTable,
     ChartCard,
-    StatsCard
+    StatsCard,
   },
   data() {
     return {
@@ -226,58 +209,15 @@ export default {
         promotion: null,
         knowus: "1",
         promotion: "1",
-        aboutMe: ""
+        aboutMe: "",
       },
-
-      nav2Styles: {
-        backgroundColor: "black",
-        height: "100%"
-      },
-      textCenter: {
-        textAlign: "center",
-        color: "#ffd373"
-      },
-      imgRegister: {
-        width: "250px"
-      },
-      colorSpan: {
-        color: "red"
-      },
-      textMemo: {
-        color: "#828282",
-        fontSize:"20px"
-      },
-      //form-StyleInput & StyleSelect
-      boxPDStyles: {
-        marginTop: "25px",
-      },
-      inputGroupStyle: {
-        backgroundColor: "black",
-        width: "100%",
-        height: "40px",
-      },
-      inputBlackBoxStyle: {
-        backgroundColor: "black",
-        borderWidth: "0px",
-        color: "white",
-        width: "100%",
-        height: "40px",
-        fontSize: "20px"
-      },
-      listInputStyle: {
-        width: "100%",
-        maxWidth: "100%"
-      },
-      selectTextColor: {
-        color: "#828282"
-      }
     };
   },
   methods: {
     register() {
       alert("register data: " + JSON.stringify(this.user));
-    }
-  }
+    },
+  },
 };
 </script>
 <style lang="scss">
@@ -288,8 +228,10 @@ export default {
   color: white;
   display: inline-block;
   appearance: none;
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
 }
-
 .custom-select select {
   height: 40px;
   // color: white !important;
@@ -299,6 +241,9 @@ export default {
   text-transform: uppercase;
   outline: none;
   appearance: none;
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
 }
 .custom-select::after {
   content: "";
@@ -313,5 +258,65 @@ export default {
   pointer-events: none;
   appearance: none;
   color: white;
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+}
+
+.nav2Styles {
+  background-color: black;
+}
+.textCenter {
+  text-align: center;
+  color: #ffd373;
+}
+.imgRegister {
+  width: 50%;
+
+  @media (max-width: 420px) {
+    width: 60%;
+  }
+}
+.colorSpan {
+  color: red;
+}
+.textMemo {
+  color: #828282;
+  font-size: 20px;
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+}
+
+.listInputStyle {
+  width: 100%;
+  max-width: 100%;
+}
+
+.selectTextColor {
+  color: #828282;
+}
+
+//form-StyleInput & StyleSelect
+.boxPDStyles {
+  margin-top: 25px;
+}
+.inputGroupStyle {
+  background-color: black;
+  width: 100%;
+  height: 40px;
+}
+.inputBlackBoxStyle {
+  background-color: black;
+  border-width: 0px;
+  color: white;
+  width: 100%;
+  height: 40px;
+  font-size: 20px;
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
 }
 </style>

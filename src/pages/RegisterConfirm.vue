@@ -1,5 +1,5 @@
 <template>
-  <div class="card-body" :style="nav2Styles">
+  <div class="card-body nav2Styles">
     <div class="container-fluid">
       <div :style="itemTextCenter">
         <h1 slot="header" class="card-title kanitFonts3" :style="textCenter1">
@@ -65,10 +65,6 @@ export default {
       user: {
         userId: "  VIP  :  0908566930"
       },
-      nav2Styles: {
-        backgroundColor: "black",
-        height: "100%"
-      },
       imageUser: {
         width: "100px"
       },
@@ -129,6 +125,10 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.nav2Styles {
+  background-color: black;
+}
+
 .imageClass {
   width: 100%;
   height: 100%;

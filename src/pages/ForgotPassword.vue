@@ -1,99 +1,104 @@
 <template>
-  <div class="card-body" :style="nav2Styles">
-    <div class="container-fluid">
-      <br />
-      <div class="col-sm-12 text-center">
-        <h1 class="card-title kanitFonts3" :style="textColerHeader">
-          ลืมรหัสผ่าน
-        </h1>
-      </div>
-      <div class="container" :style="imageCard">
+  <div class="card-body nav2Styles">
+    <div class="col-sm-12 text-center">
+      <h1 class="card-title kanitFonts3 textColerHeader">ลืมรหัสผ่าน</h1>
+    </div>
+    <div class="container imageCard">
+      <div class="wrapper-full-page marginToTop">
+        <div class="col-sm-12">
+          <label class="kanitFonts2 labelStyleInput">หมายเลขโทรศัพท์*</label>
+        </div>
+        <input
+          type="search"
+          class="form-control kanitFonts1 inputStyle"
+          placeholder="xxx-xxx-xxxx"
+        />
         <br />
-
-        <div class="wrapper-full-page" :style="marginToTop">
-          <div class="col-sm-12">
-            <label class="kanitFonts2" :style="labelStyleInput"
-              >หมายเลขโทรศัพท์*</label
-            >
-          </div>
-          <input
-            type="search"
-            class="form-control kanitFonts1"
-            placeholder="xxx-xxx-xxxx"
-            :style="inputStyle"
-          />
-          <br />
-          <div :style="itemTextCenter">
-            <a class="navbar-brand" href="#">
-              <img
-                class="avatar border-gray"
-                src="img/newImage/BT_Password.png"
-                alt="..."
-                :style="imageGotoPasword"
-              />
-            </a>
-          </div>
+        <div class="itemTextCenter">
+          <a class="navbar-brand" href="#">
+            <img
+              class="img-responsive imageGotoPasword"
+              src="img/newImage/BT_Password.png"
+              alt="..."
+            />
+          </a>
         </div>
       </div>
     </div>
+    <br />
   </div>
 </template>
 <script>
 export default {
   data() {
-    return {
-      nav2Styles: {
-        backgroundColor: "black",
-        height: "100%"
-      },
-      textColerHeader: {
-        color: "#ffd373"
-      },
-      textFooterBoxLogin: {
-        color: "#757575",
-        fontSize: "24px"
-      },
-      itemTextCenter: {
-        textAlign: "center"
-      },
-      marginToTop: {
-        paddingTop: "25px"
-      },
-      labelStyleInput: {
-        marginLeft: "25px",
-        width: "90%",
-        fontSize: "25px"
-      },
-      inputStyle: {
-        backgroundColor: "black",
-        borderWidth: "0px",
-        margin: "25px",
-        width: "95%",
-        height: "70px",
-        color: "white",
-        fontSize: "28px"
-      },
-      imageGotoPasword: {
-        width: "350px"
-      },
-      imageCard: {
-        backgroundImage: "url(img/newImage/BG_Detail01.png)",
-        marginTop: "5%",
-        marginBottom: "5%",
-        backgroundSize: "contain no-repeat",
-        width: "1016px",
-        height: "407px"
-      },
-      imgRegister: {
-        width: "350px"
-      }
-    };
-  }
+    return {};
+  },
 };
 </script>
 <style lang="scss">
 hr.new5 {
   border: 1px solid white;
   border-radius: 0px;
+}
+
+.nav2Styles {
+  background-color: black;
+}
+.textColerHeader {
+  color: #ffd373;
+}
+.textFooterBoxLogin {
+  color: #757575;
+  font-size: 24px;
+}
+.itemTextCenter {
+  text-align: center;
+}
+.marginToTop {
+  padding-top: 15px;
+}
+.labelStyleInput {
+  // margin-left: 25px;
+  width: 90%;
+  font-size: 25px;
+  @media (max-width: 420px) {
+    font-size: 16px;
+  }
+}
+.inputStyle {
+  background-color: black;
+  border-width: 0px;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+
+  @media (max-width: 420px) {
+    background-color: black;
+    border-width: 0px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+  }
+}
+.imageGotoPasword {
+  width: 50%;
+
+  @media (max-width: 420px) {
+    width: 60%;
+  }
+}
+.imageCard {
+  background-image: url(/img/newImage/BG_Detail01.png);
+  background-size: contain no-repeat;
+  background-position: center;
+  width: 100%;
+  border-radius: 10px;
+
+  @media (max-width: 420px) {
+    background-size: contain no-repeat;
+    background-position: center;
+    width: 100%;
+    border-radius: 10px;
+  }
 }
 </style>
