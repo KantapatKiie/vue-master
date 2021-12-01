@@ -1,23 +1,20 @@
 <template>
-  <div class="card-body" :style="nav2Styles">
+  <div class="card-body nav2Styles">
     <div class="container-fluid">
-      <br />
       <div class="col-sm-12 text-center">
-        <h1 class="card-title kanitFonts3" :style="textColerHeader">
-          ฝากเงินอัตโนมัติ
-        </h1>
+        <h1 class="card-title kanitFonts3 textColerHeader">ฝากเงินอัตโนมัติ</h1>
       </div>
       <br />
-      <div class="container" :style="imageBackgroundMain">
+
+      <div class="container imageBackgroundMain">
         <br />
         <div class="col-sm-12 text-center">
           <input
             type="text"
             id="userId"
             disabled
-            class="kanitFonts1"
+            class="kanitFonts1 inputBankText"
             placeholder="ธนาคารไทยพาณิชย์"
-            :style="inputBankText"
             v-model="bank.bankName"
           />
         </div>
@@ -26,60 +23,59 @@
             type="text"
             id="userId"
             disabled
-            class="kanitFonts1"
+            class="kanitFonts1 inputBankText"
             placeholder="0908566930"
-            :style="inputBankText"
             v-model="bank.bankNumber"
           />
         </div>
-        <h4 class="kanitFonts2" :style="labelMemoText">
+        <h4 class="kanitFonts2 labelMemoText">
           *ควรใช้บัญชีข้างบนในการฝากเงินเท่านั้น
         </h4>
         <br />
         <div class="row justify-content-md-center">
-          <div class="col-sm-4">
+          <div class="col-12 text-center">
             <img
-              class="avatar border-gray"
+              class="img-responsive imageDeposit"
               src="img/newImage/Text_H01.png"
               alt="..."
-              :style="imageDeposit"
             />
           </div>
         </div>
         <br />
+
         <div class="row justify-content-md-center">
-          <div class="col-sm-8">
+          <div class="col-12 text-center">
             <img
-              class="avatar border-gray"
+              class="img-responsive imageBank"
               src="img/newImage/SCB_Logo.jpg"
               alt="..."
-              :style="imageRowBottom"
             />
           </div>
         </div>
-        <br /><br />
-        <div class="row justify-content-md-center">
-          <div class="col-sm-4">
+        <br />
+
+        <div class="row justify-content-md-center text-center">
+          <div class="col-5">
             <a class="navbar-brand" href="#">
               <img
-                class="avatar border-gray"
+                class="img-responsive imageRowBottom"
                 src="img/newImage/BT_Copy.png"
                 alt="..."
-                :style="imageRowBottom"
               />
             </a>
           </div>
-          <div class="col-sm-4">
+          <div class="col-1" />
+          <div class="col-5">
             <a class="navbar-brand" href="#">
               <img
-                class="avatar border-gray"
+                class="img-responsive imageRowBottom"
                 src="img/newImage/BT_Check.png"
                 alt="..."
-                :style="imageRowBottom"
               />
             </a>
           </div>
         </div>
+        <br /><br />
       </div>
     </div>
   </div>
@@ -91,62 +87,87 @@ import Card from "src/components/Cards/Card.vue";
 export default {
   components: {
     LTable,
-    Card
+    Card,
   },
   data() {
     return {
       user: {
-        userId: "  VIP  :  0908566930"
+        userId: "  VIP  :  0908566930",
       },
       bank: {
         bankName: "   ธนาคารไทยพาณิชย์",
-        bankNumber: "   0908566930"
+        bankNumber: "   0908566930",
       },
-      nav2Styles: {
-        backgroundColor: "black",
-        height: "90%"
-      },
-      imageLogoUser: {
-        backgroundImage: "url(img/newImage/Profile_Picture.png)"
-      },
-      inputBankText: {
-        width: "90%",
-        height: "70px",
-        margin: "25px",
-        backgroundColor: "#212121",
-        borderRadius: "4px",
-        color: "white",
-        fontSize: "25px",
-      },
-      labelMemoText: {
-        color: "red",
-        fontSize: "20px",
-        textAlign: "center",
-        fontSize: "25px"
-      },
-      textColerHeader: {
-        color: "#ffd373"
-      },
-      imageBackgroundMain: {
-        backgroundImage: "url(img/newImage/backgroungImage.png)",
-        width: "100%",
-        height: "900px",
-        backgroundSize: "cover",
-        backgroundRepeat: "no-repeat"
-        // backgroundPosition: "center",
-      },
-      imageDeposit: {
-        width: "100%"
-      },
-      imageRowBottom: {
-        width: "100%"
-      }
     };
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
-.imageLogoUserClass {
+.nav2Styles {
+  background-color: black;
+}
+
+.inputBankText {
+  width: 90%;
+  height: 70px;
+  margin: 25px;
+  background-color: #212121;
+  border-radius: 4px;
+  color: white;
+  font-size: 25px;
+
+  @media (max-width: 420px) {
+    width: 90%;
+    height: 30%;
+    margin: 10px;
+    font-size: 16px;
+  }
+}
+.labelMemoText {
+  color: red;
+  font-size: 20px;
+  text-align: center;
+  font-size: 25px;
+
+  @media (max-width: 420px) {
+    font-size: 15px;
+  }
+}
+.textColerHeader {
+  color: "#ffd373";
+  @media (max-width: 420px) {
+    font-size: 24px;
+  }
+}
+.imageBackgroundMain {
+  background-image: url(/img/newImage/backgroungImage.png);
+  width: 100%;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media (max-width: 420px) {
+    // font-size: 24px;
+  }
+}
+.imageDeposit {
+  width: 50%;
+
+  @media (max-width: 420px) {
+    width: 70%;
+  }
+}
+.imageBank {
+  width: 70%;
+  @media (max-width: 420px) {
+    width: 90%;
+  }
+}
+
+.imageRowBottom {
+  width: 90%;
+  @media (max-width: 420px) {
+    width: 120%;
+  }
 }
 </style>
