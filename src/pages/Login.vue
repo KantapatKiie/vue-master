@@ -1,90 +1,85 @@
 <template>
-  <div class="card-body" :style="nav2Styles">
+  <div class="card-body nav2Styles">
     <div class="container-fluid">
-      <br />
       <div class="col-sm-12 text-center">
-        <h1 class="card-title kanitFonts3" :style="textColerHeader">
-          ยินดีต้อนรับ
-        </h1>
+        <h1 class="card-title kanitFonts3 textColerHeader">ยินดีต้อนรับ</h1>
       </div>
-      <div class="container" :style="imageCard">
-        <div class="wrapper-full-page" :style="marginToTop">
+      <div class="container imageCard">
+        <div class="wrapper-full-page marginToTop">
           <div class="form-group">
             <div class="col-sm-6">
-              <label class="kanitFonts2" :style="labelStyleInput"
-                >ชื่อเข้าระบบ</label
-              >
+              <label class="kanitFonts2 labelStyleInput">ชื่อเข้าระบบ</label>
             </div>
             <input
               type="search"
-              class="form-control kanitFonts1"
+              class="form-control kanitFonts1 inputStyle"
               placeholder="User Id"
-              :style="inputStyle"
             />
           </div>
           <div class="form-group">
             <div class="col-sm-6">
-              <label class="kanitFonts2" :style="labelStyleInput"
-                >รหัสผ่าน</label
-              >
+              <label class="kanitFonts2 labelStyleInput">รหัสผ่าน</label>
             </div>
             <input
               type="search"
-              class="form-control kanitFonts1"
+              class="form-control kanitFonts1 inputStyle"
               placeholder="Password"
-              :style="inputStyle"
             />
           </div>
-          <div :style="itemTextCenter">
+          <div class="itemTextCenter">
             <a class="navbar-brand" href="#/admin/account">
               <img
-                class="avatar border-gray"
+                class="img-responsive imageGotoMainmenu"
                 src="img/newImage/BT_Login.png"
                 alt="..."
-                :style="imageGotoMainmenu"
               />
             </a>
           </div>
         </div>
       </div>
+
       <div class="row justify-content-md-center">
         <div class="col-sm-12 text-center">
           <a class="navbar-brand" href="#/admin/forgot-password">
-            <label class="card-title kanitFonts1" :style="textFooterBoxLogin">
+            <label class="card-title kanitFonts1 textFooterBoxLogin">
               ลืมรหัสผ่าน
             </label>
           </a>
           <a class="navbar-brand" href="#">
-            <label class="card-title kanitFonts1" :style="textFooterBoxLogin">
-              / ติดต่อเจ้าหน้าที่
+            <label class="card-title kanitFonts1 textFooterBoxLogin">
+              / &nbsp;&nbsp;&nbsp;&nbsp;ติดต่อเจ้าหน้าที่
             </label>
           </a>
         </div>
       </div>
       <br /><br />
+
       <div class="row justify-content-md-center">
-        <div class="col-sm-5">
-          <hr class="new5" />
-        </div>
-        <div class="col-sm-2 text-center">
-          <label class="card-title kanitFonts1" :style="textFooterBoxLogin">
-            ยังไม่มีบัญชี
-          </label>
-        </div>
-        <div class="col-sm-5">
-          <hr class="new5" />
+        <div class="row">
+          <div class="col-4">
+            <hr class="new5" />
+          </div>
+          <div class="col-4 text-center">
+            <label class="card-title kanitFonts1 textFooterNoAccount">
+              ยังไม่มีบัญชี
+            </label>
+          </div>
+          <div class="col-4">
+            <hr class="new5" />
+          </div>
         </div>
       </div>
       <br /><br />
+
       <div class="text-center">
         <a class="navbar-brand" href="#/admin/register">
           <img
-            class="img-responsive"
+            class="img-responsive imgRegister"
             src="img/newImage/BT_Register.png"
-            :style="imgRegister"
           />
         </a>
       </div>
+      <br />
     </div>
   </div>
 </template>
@@ -93,60 +88,114 @@ export default {
   data() {
     return {
       user: {
-        userId: "  VIP  :  0908566930"
+        userId: "  VIP  :  0908566930",
       },
-      nav2Styles: {
-        backgroundColor: "black",
-        height: "100%"
-      },
-      textColerHeader: {
-        color: "#ffd373"
-      },
-      textFooterBoxLogin: {
-        color: "#757575",
-        fontSize: "24px"
-      },
-      itemTextCenter: {
-        textAlign: "center"
-      },
-      marginToTop: {
-        paddingTop: "25px"
-      },
-      labelStyleInput: {
-        marginLeft: "25px",
-        width: "90%",
-        fontSize: "20px"
-      },
-      inputStyle: {
-        backgroundColor: "black",
-        borderWidth: "0px",
-        margin: "25px",
-        width: "95%",
-        color: "white",
-        fontSize: "22px"
-      },
-      imageGotoMainmenu: {
-        width: "250px"
-      },
-      imageCard: {
-        backgroundImage: "url(img/newImage/BG_Detail01.png)",
-        marginTop: "5%",
-        marginBottom: "5%",
-        backgroundSize: "contain no-repeat",
-        // backgroundPosition: "center",
-        width: "1016px",
-        height: "407px"
-      },
-      imgRegister: {
-        width: "350px"
-      }
     };
-  }
+  },
 };
 </script>
 <style lang="scss">
+.nav2Styles {
+  background-color: black;
+}
+
+.textColerHeader {
+  color: #ffd373;
+  font-size: 35px;
+
+  @media (max-width: 420px) {
+    font-size: 28px;
+  }
+}
+
+.imageCard {
+  background-image: url(/img/newImage/BG_Detail01.png);
+  background-size: contain no-repeat;
+  background-position: center;
+  width: 100%;
+  border-radius: 10px;
+
+  @media (max-width: 420px) {
+    background-size: contain no-repeat;
+    background-position: center;
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
+.marginToTop {
+  padding-top: 25px;
+}
+
+.labelStyleInput {
+  width: 100%;
+  font-size: 20px;
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+}
+
+.inputStyle {
+  background-color: black;
+  border-width: 0px;
+  width: 100%;
+  color: white;
+  font-size: 18px;
+
+  @media (max-width: 420px) {
+    border-width: 0px;
+    width: 100%;
+    color: white;
+    font-size: 14px;
+  }
+}
+
+.imageGotoMainmenu {
+  width: 30%;
+  margin-top: 10px;
+
+  @media (max-width: 420px) {
+    width: 50%;
+  }
+}
+
+.itemTextCenter {
+  text-align: center;
+}
+
+.textFooterBoxLogin {
+  color: #757575;
+  font-size: 22px;
+
+  @media (max-width: 420px) {
+    font-size: 14px;
+  }
+}
+
+.textFooterNoAccount {
+  color: #757575;
+  font-size: 18px;
+
+  @media (max-width: 420px) {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
 hr.new5 {
   border: 1px solid white;
   border-radius: 0px;
+
+  @media (max-width: 420px) {
+    width: 120%;
+  }
+}
+
+.imgRegister {
+  width: 40%;
+
+  @media (max-width: 420px) {
+    width: 50%;
+  }
 }
 </style>

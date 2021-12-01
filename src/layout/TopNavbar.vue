@@ -1,71 +1,66 @@
 <template>
-  <div :style="backgrondTopNav">
+  <div class="container" :style="backgrondTopNav">
     <br />
-    <nav class="navbar-expand-lg">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <div class="textSlide">
-              <span class="kanitFonts2">#ข้อความ #โปรโมชั่น #ส่วนลด #ดีล</span>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="row">
-              <div class="col-sm" />
-              <div class="col-sm">
-                <a class="navbar-brand" href="#/admin/account">
-                  <img
-                    class="avatar border-gray navIconRight"
-                    src="img/newImage/home.png"
-                    alt="..."
-                  />
-                </a>
-              </div>
-              <div class="col-sm">
-                <a class="navbar-brand" href="#">
-                  <img
-                    class="avatar border-gray navIconRight"
-                    src="img/newImage/BT_PlayGame.png"
-                    alt="..."
-                  />
-                </a>
-              </div>
-              <div class="col-sm">
-                <a class="navbar-brand" href="#/admin/login">
-                  <img
-                    class="avatar border-gray navIconRight"
-                    src="img/newImage/logout.png"
-                    alt="..."
-                  />
-                </a>
-              </div>
-            </div>
-          </div>
+    <!-- Top Navbar -->
+    <div class="row">
+      <div class="col-7">
+        <div class="textSlide">
+          <span class="kanitFonts1">#ข้อความ #โปรโมชั่น #ส่วนลด #ดีล</span>
         </div>
       </div>
-    </nav>
-    <br />
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-3">
-          <img
-            class="img-responsive d-block mx-auto"
-            src="img/newImage/Profile_Picture.png"
-            alt="Logo-line"
-          />
-        </div>
-        <div class="col-sm-8">
-          <input
-            type="text"
-            id="userId"
-            class="kanitFonts2"
-            disabled
-            v-model="user.userId"
-            :style="inputViewUser"
-          />
+      <div class="col-5">
+        <div class="row">
+          <div class="col-4">
+            <a class="navbar-brand" href="#/admin/account">
+              <img
+                class="img-responsive navIconRight"
+                src="img/newImage/home.png"
+                alt="..."
+              />
+            </a>
+          </div>
+          <div class="col-4">
+            <a class="navbar-brand" href="#">
+              <img
+                class="img-responsive navIconRight"
+                src="img/newImage/BT_PlayGame.png"
+                alt="..."
+              />
+            </a>
+          </div>
+          <div class="col-4">
+            <a class="navbar-brand" href="#/admin/login">
+              <img
+                class="img-responsive navIconRight"
+                src="img/newImage/logout.png"
+                alt="..."
+              />
+            </a>
+          </div>
         </div>
       </div>
     </div>
+    <br />
+    <!-- User Profile -->
+    <div class="row">
+      <div class="col-3">
+        <img
+          class="img-responsive d-block mx-auto imgLogoProfile"
+          src="img/newImage/Profile_Picture.png"
+          alt="Logo-line"
+        />
+      </div>
+      <div class="col-9">
+        <input
+          type="text"
+          id="userId"
+          class="kanitFonts2 inputUserId"
+          disabled
+          v-model="user.userId"
+        />
+      </div>
+    </div>
+    <br />
   </div>
 </template>
 <script>
@@ -84,16 +79,7 @@ export default {
       },
       backgrondTopNav: {
         backgroundColor: "black",
-        width: "100%",
-      },
-      inputViewUser: {
-        width: "100%",
-        height: "60%",
-        marginTop: "25px",
-        backgroundColor: "#383838",
-        borderRadius: "5px",
-        color: "white",
-        fontSize: "28px",
+        // width: "100%",
       },
     };
   },
@@ -118,14 +104,14 @@ export default {
 </script>
 <style lang="scss" scoped>
 .textSlide {
-  font-size: 32px;
+  font-size: 24px;
   color: #999999;
-  margin: 0 auto;
+  margin: 5px;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
   @media (max-width: 420px) {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
@@ -140,10 +126,37 @@ export default {
 }
 
 .navIconRight {
-  width: 100%;
+  width: 70%;
+  justify-content: center;
+  @media (max-width: 420px) {
+    width: 100%;
+  }
+}
+
+.imgLogoProfile {
+  width: 55%;
 
   @media (max-width: 420px) {
-    width: 12%;
+    width: 80%;
+  }
+}
+
+.inputUserId {
+  width: 90%;
+  margin-top: 18px;
+  background-color: #383838;
+  border-radius: 5px;
+  color: white;
+  font-size: 26px;
+
+  @media (max-width: 420px) {
+    width: 100%;
+    height: 60%;
+    margin-top: 12px;
+    background-color: #383838;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
   }
 }
 
