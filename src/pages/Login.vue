@@ -190,10 +190,10 @@ hr.new5 {
 }
 
 .imgRegister {
-  width: 40%;
+  width: 35%;
 
   @media (max-width: 420px) {
-    width: 50%;
+    width: 40%;
   }
 }
 </style>
