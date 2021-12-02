@@ -22,12 +22,12 @@ const routes = [
   {
     path: "/",
     component: DashboardLayout,
-    redirect: "/admin/account",
+    redirect: "/admin/login",
   },
   {
     path: "/admin",
     component: DashboardLayout,
-    redirect: "/admin/account",
+    redirect: "/admin/login",
     children: [
       {
         path: "login",
